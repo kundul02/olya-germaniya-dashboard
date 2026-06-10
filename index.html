@@ -3,171 +3,480 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BVUFSFJ Leads Dashboard</title>
+    <title>BVUFSFJ — Дашборд лидов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg: #f6f7fb;
+        --de-schwarz: #1c1c1c;
+        --de-rot: #c8102e;
+        --de-gold: #ffce00;
+        --de-gold-soft: #fff4c2;
+        --bg: #ececec;
         --card: #ffffff;
-        --text: #1f2937;
-        --muted: #6b7280;
-        --line: #e5e7eb;
-        --accent: #2563eb;
-        --ok: #166534;
-        --warn: #9a3412;
-        --bad: #991b1b;
+        --text: #1c1c1c;
+        --muted: #5c5c5c;
+        --line: #d4d4d4;
+        --ok: #1b6b3a;
+        --ok-bg: #e8f5ec;
+        --warn: #9a5b00;
+        --warn-bg: #fff6e0;
+        --bad: #a31818;
+        --bad-bg: #fdeaea;
+        --info: #2a4a7a;
+        --info-bg: #eaf0fa;
+        --radius: 10px;
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
       }
+
       * { box-sizing: border-box; }
+
       body {
         margin: 0;
-        font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+        font-family: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
         background: var(--bg);
         color: var(--text);
+        line-height: 1.45;
       }
+
+      .flag-bar {
+        height: 4px;
+        background: linear-gradient(90deg, var(--de-schwarz) 33.33%, var(--de-rot) 33.33% 66.66%, var(--de-gold) 66.66%);
+      }
+
       .wrap {
-        max-width: 1280px;
+        max-width: 1320px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 20px 20px 40px;
       }
-      .top {
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 16px;
-        margin-bottom: 16px;
+
+      .hero {
+        background: var(--de-schwarz);
+        color: #fff;
+        border-radius: var(--radius);
+        padding: 22px 24px;
+        margin-bottom: 18px;
       }
-      h1 { margin: 0 0 8px; font-size: 22px; }
-      .subtitle { color: var(--muted); font-size: 14px; }
-      .meta {
+
+      .hero h1 {
+        margin: 0 0 6px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .hero .subtitle {
+        color: #d8d8d8;
+        font-size: 14px;
+        max-width: 720px;
+      }
+
+      .hero-meta {
+        margin-top: 14px;
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
-        margin-top: 12px;
+        font-size: 12px;
+        color: #bdbdbd;
       }
-      .chip {
-        background: #f3f4f6;
-        border: 1px solid var(--line);
+
+      .hero-meta span {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 999px;
         padding: 4px 10px;
-        font-size: 12px;
-        color: #374151;
       }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .stat-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 14px 16px;
+        border-left: 4px solid var(--accent, var(--de-schwarz));
+        box-shadow: var(--shadow);
+      }
+
+      .stat-card .val {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--val-color, var(--text));
+      }
+
+      .stat-card .lbl {
+        margin-top: 4px;
+        font-size: 12px;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .stat-our { --accent: var(--de-gold); --val-color: #8a6d00; }
+      .stat-a { --accent: #2d8a4e; --val-color: var(--ok); }
+      .stat-b { --accent: #d48806; --val-color: var(--warn); }
+      .stat-c { --accent: var(--de-rot); --val-color: var(--bad); }
+      .stat-src { --accent: var(--info); --val-color: var(--info); }
+
+      .charts-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 14px;
+        margin-bottom: 16px;
+      }
+
+      .panel {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .panel-head {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--line);
+        font-size: 13px;
+        font-weight: 600;
+        background: #fafafa;
+      }
+
+      .panel-body {
+        padding: 16px;
+      }
+
+      .chart-caption {
+        margin-top: 8px;
+        font-size: 11px;
+        color: var(--muted);
+      }
+
+      .controls {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 16px;
+        margin-bottom: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .controls-title {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
       .filters {
         display: grid;
-        grid-template-columns: 1.4fr 1fr 1fr 0.8fr 1fr auto;
+        grid-template-columns: 1.5fr repeat(4, 1fr) auto;
         gap: 10px;
-        margin-top: 12px;
+        align-items: end;
       }
-      .tabs {
-        margin-top: 12px;
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
+
+      .field label {
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--muted);
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
       }
-      .tab {
-        font-size: 13px;
-      }
-      .tab.active {
-        background: var(--accent);
-        color: #fff;
-        border-color: var(--accent);
-      }
+
       input, select {
         width: 100%;
         padding: 10px 12px;
         border-radius: 8px;
         border: 1px solid var(--line);
         background: #fff;
+        font-family: inherit;
+        font-size: 13px;
+        transition: border-color 0.15s, box-shadow 0.15s;
       }
-      button {
-        padding: 10px 14px;
+
+      input:focus, select:focus {
+        outline: none;
+        border-color: var(--de-schwarz);
+        box-shadow: 0 0 0 3px rgba(28, 28, 28, 0.08);
+      }
+
+      .btn {
+        padding: 10px 16px;
         border-radius: 8px;
         border: 1px solid var(--line);
         background: #fff;
         cursor: pointer;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 500;
+        transition: background 0.15s, border-color 0.15s, color 0.15s;
       }
-      .card {
+
+      .btn:hover {
+        background: #f5f5f5;
+        border-color: #bbb;
+      }
+
+      .btn-reset {
+        border-color: var(--de-rot);
+        color: var(--de-rot);
+      }
+
+      .btn-reset:hover {
+        background: #fff0f2;
+      }
+
+      .tabs {
+        margin-top: 14px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .tab {
+        font-size: 13px;
+        font-weight: 500;
+        padding: 9px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fafafa;
+        color: var(--text);
+        cursor: pointer;
+        transition: all 0.18s ease;
+      }
+
+      .tab:hover {
+        border-color: var(--de-schwarz);
+        background: #fff;
+        transform: translateY(-1px);
+      }
+
+      .tab.active {
+        background: var(--de-schwarz);
+        color: #fff;
+        border-color: var(--de-schwarz);
+        box-shadow: inset 0 -3px 0 var(--de-gold);
+      }
+
+      .tab.active.tab-a { box-shadow: inset 0 -3px 0 #4caf50; }
+      .tab.active.tab-b { box-shadow: inset 0 -3px 0 #ffb020; }
+      .tab.active.tab-c { box-shadow: inset 0 -3px 0 var(--de-rot); }
+
+      .tab .cnt {
+        display: inline-block;
+        margin-left: 6px;
+        font-size: 11px;
+        opacity: 0.75;
+        font-weight: 600;
+      }
+
+      .table-panel {
         background: var(--card);
         border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 14px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
       }
-      .tableWrap { overflow: auto; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
-      table { width: 100%; border-collapse: collapse; min-width: 1200px; }
-      th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13px; }
-      th { text-align: left; background: #f9fafb; color: #374151; position: sticky; top: 0; }
-      td .t { font-weight: 600; margin-bottom: 4px; }
-      td .d { color: #6b7280; font-size: 12px; }
-      td.reason { color: #374151; font-size: 12px; max-width: 240px; line-height: 1.35; }
-      .status, .grade {
+
+      .table-head-bar {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fafafa;
+      }
+
+      .table-head-bar h2 {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .result-count {
         font-size: 12px;
-        border-radius: 999px;
+        color: var(--muted);
+      }
+
+      .tableWrap { overflow: auto; }
+      table { width: 100%; border-collapse: collapse; min-width: 1100px; }
+      th, td {
+        padding: 11px 14px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        font-size: 13px;
+      }
+      th {
+        text-align: left;
+        background: #f3f3f3;
+        color: #444;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+      tbody tr:hover { background: var(--de-gold-soft); }
+      tbody tr:nth-child(even) { background: #fafafa; }
+      tbody tr:nth-child(even):hover { background: var(--de-gold-soft); }
+
+      td .t { font-weight: 600; margin-bottom: 3px; color: var(--text); }
+      td .d { color: var(--muted); font-size: 12px; }
+      td.reason { color: #444; font-size: 12px; max-width: 220px; line-height: 1.4; }
+
+      .badge {
+        font-size: 11px;
+        border-radius: 6px;
         padding: 4px 8px;
         border: 1px solid;
         white-space: nowrap;
         display: inline-block;
         font-weight: 600;
       }
-      .st-active { color: var(--ok); border-color: #86efac; background: #f0fdf4; }
-      .st-unknown { color: #334155; border-color: #cbd5e1; background: #f8fafc; }
-      .st-expired { color: var(--bad); border-color: #fca5a5; background: #fef2f2; }
-      .st-watch { color: var(--warn); border-color: #fdba74; background: #fff7ed; }
-      .gr-a { color: #14532d; border-color: #86efac; background: #dcfce7; }
-      .gr-b { color: #92400e; border-color: #fcd34d; background: #fef9c3; }
-      .gr-c { color: var(--bad); border-color: #fca5a5; background: #fef2f2; }
-      .gr-source { color: #475569; border-color: #cbd5e1; background: #f1f5f9; }
-      .empty {
+
+      .st-active { color: var(--ok); border-color: #9fd4b0; background: var(--ok-bg); }
+      .st-unknown { color: #475569; border-color: #cbd5e1; background: #f8fafc; }
+      .st-expired { color: var(--bad); border-color: #f5b0b0; background: var(--bad-bg); }
+      .st-watch { color: var(--warn); border-color: #f5d08a; background: var(--warn-bg); }
+
+      .gr-a { color: var(--ok); border-color: #9fd4b0; background: var(--ok-bg); }
+      .gr-b { color: var(--warn); border-color: #f5d08a; background: var(--warn-bg); }
+      .gr-c { color: var(--bad); border-color: #f5b0b0; background: var(--bad-bg); }
+      .gr-source { color: var(--info); border-color: #b8cce8; background: var(--info-bg); }
+
+      .link-btn {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 6px;
+        background: var(--de-schwarz);
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        transition: background 0.15s;
+      }
+
+      .link-btn:hover {
+        background: var(--de-rot);
+      }
+
+      .empty, .error-box {
         text-align: center;
         color: var(--muted);
-        padding: 28px 12px;
+        padding: 40px 20px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
       }
-      @media (max-width: 900px) {
+
+      .legend {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        font-size: 12px;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .legend-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+      }
+
+      @media (max-width: 1100px) {
+        .stats-grid { grid-template-columns: repeat(3, 1fr); }
+        .charts-grid { grid-template-columns: 1fr; }
         .filters { grid-template-columns: 1fr 1fr; }
+      }
+
+      @media (max-width: 640px) {
+        .stats-grid { grid-template-columns: 1fr 1fr; }
       }
     </style>
   </head>
   <body>
+    <div class="flag-bar"></div>
     <div class="wrap">
-      <section class="top">
-        <h1>Leads Dashboard — фильтр BVUFSFJ</h1>
-        <div class="subtitle">
-          Наши лиды (A+B) по критериям организации. Отсеянные (C) сохранены с объяснением.
-        </div>
-        <div id="meta" class="meta"></div>
+      <header class="hero">
+        <h1>Дашборд лидов BVUFSFJ</h1>
+        <p class="subtitle">
+          Мониторинг грантовых возможностей с фильтром A/B/C по критериям организации.
+          Наши лиды — для рассмотрения, отсеянные — с объяснением причины.
+        </p>
+        <div id="heroMeta" class="hero-meta"></div>
+      </header>
+
+      <section id="stats" class="stats-grid"></section>
+      <section id="charts" class="charts-grid"></section>
+
+      <section class="controls">
+        <div class="controls-title">Фильтры и разделы</div>
         <div class="filters">
-          <input id="q" placeholder="Поиск по URL/источнику/описанию..." />
-          <select id="sourceFilter"><option value="">Все источники</option></select>
-          <select id="statusFilter">
-            <option value="">Все статусы</option>
-            <option value="active">active</option>
-            <option value="unknown">unknown</option>
-            <option value="expired">expired</option>
-            <option value="watch">watch</option>
-            <option value="rolling">rolling</option>
-          </select>
-          <div class="gradeFilterWrap">
-            <select id="gradeFilter">
-              <option value="">Все оценки</option>
-              <option value="A">A — strong</option>
-              <option value="B">B — review</option>
-              <option value="C">C — exclude</option>
+          <div class="field">
+            <label for="q">Поиск</label>
+            <input id="q" placeholder="URL, источник, описание..." />
+          </div>
+          <div class="field">
+            <label for="sourceFilter">Источник</label>
+            <select id="sourceFilter"><option value="">Все</option></select>
+          </div>
+          <div class="field">
+            <label for="statusFilter">Статус</label>
+            <select id="statusFilter">
+              <option value="">Все</option>
+              <option value="active">Активный</option>
+              <option value="rolling">Постоянный (rolling)</option>
+              <option value="watch">Скоро дедлайн</option>
+              <option value="unknown">Неизвестно</option>
+              <option value="expired">Истёк</option>
             </select>
           </div>
-          <select id="dateFilter">
-            <option value="">Все даты</option>
-            <option value="with_dates">Только с датами</option>
-            <option value="no_dates">Только без дат</option>
-          </select>
-          <button id="resetBtn">Сбросить</button>
+          <div class="field gradeFilterWrap">
+            <label for="gradeFilter">Оценка</label>
+            <select id="gradeFilter">
+              <option value="">Все</option>
+              <option value="A">A — сильный</option>
+              <option value="B">B — проверить</option>
+              <option value="C">C — отсеять</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="dateFilter">Даты</label>
+            <select id="dateFilter">
+              <option value="">Все</option>
+              <option value="with_dates">С датами</option>
+              <option value="no_dates">Без дат</option>
+            </select>
+          </div>
+          <button id="resetBtn" class="btn btn-reset" type="button">Сбросить</button>
         </div>
         <div class="tabs">
-          <button id="tabOur" class="tab active">Наши лиды (A+B)</button>
-          <button id="tabStrong" class="tab">Сильные (A)</button>
-          <button id="tabReview" class="tab">На проверку (B)</button>
-          <button id="tabExcluded" class="tab">Отсеянные (C)</button>
-          <button id="tabApplication" class="tab">Все application</button>
-          <button id="tabSources" class="tab">Source pages</button>
+          <button id="tabOur" class="tab active" type="button">Наши лиды<span class="cnt" id="cntOur"></span></button>
+          <button id="tabStrong" class="tab tab-a" type="button">Сильные A<span class="cnt" id="cntStrong"></span></button>
+          <button id="tabReview" class="tab tab-b" type="button">На проверку B<span class="cnt" id="cntReview"></span></button>
+          <button id="tabExcluded" class="tab tab-c" type="button">Отсеянные C<span class="cnt" id="cntExcluded"></span></button>
+          <button id="tabApplication" class="tab" type="button">Все заявки<span class="cnt" id="cntApp"></span></button>
+          <button id="tabSources" class="tab" type="button">Источники<span class="cnt" id="cntSrc"></span></button>
         </div>
       </section>
+
       <section id="list"></section>
     </div>
     <script src="./app.js"></script>
