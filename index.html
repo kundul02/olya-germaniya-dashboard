@@ -281,24 +281,94 @@
       .panel-head {
         padding: 16px 24px;
         border-bottom: 1px solid var(--line);
+        background: #fafaf8;
+      }
+
+      .panel-head-title {
         font-size: 17px;
         font-weight: 600;
-        background: #fafaf8;
+        margin: 0 0 6px;
+      }
+
+      .panel-head-desc {
+        margin: 0;
+        font-size: 15px;
+        color: var(--muted);
+        line-height: 1.45;
       }
 
       .panel-body { padding: 24px; }
 
-      .chart-caption {
-        margin-top: 12px;
+      .chart-wrap {
+        overflow: visible;
+        margin-bottom: 8px;
+      }
+
+      .chart-wrap svg {
+        display: block;
+        overflow: visible;
+      }
+
+      .pipeline-steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .pipeline-step {
+        background: #fafaf8;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 16px;
+        border-top: 4px solid var(--step-color, var(--de-schwarz));
+      }
+
+      .pipeline-step .step-num {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--step-color, var(--de-schwarz));
+        margin-bottom: 4px;
+      }
+
+      .pipeline-step .step-title {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .pipeline-step .step-desc {
         font-size: 14px;
         color: var(--muted);
+        line-height: 1.4;
+      }
+
+      .pipeline-step .step-val {
+        margin-top: 8px;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .chart-summary {
+        margin-top: 16px;
+        padding: 14px 18px;
+        background: var(--de-gold-soft);
+        border-radius: 12px;
+        border: 1px solid #f0d878;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .chart-summary strong {
+        color: var(--text);
       }
 
       .chart-legend {
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
-        margin-top: 14px;
+        margin-top: 16px;
         font-size: 15px;
         color: var(--muted);
       }
@@ -486,6 +556,7 @@
         .hero { flex-direction: column; text-align: center; }
         .kpi-grid { grid-template-columns: repeat(3, 1fr); }
         .filters { grid-template-columns: 1fr 1fr; }
+        .pipeline-steps { grid-template-columns: repeat(2, 1fr); }
       }
 
       @media (max-width: 640px) {
@@ -570,6 +641,6 @@
 
       <section id="list"></section>
     </div>
-    <script src="./app.js?v=3"></script>
+    <script src="./app.js?v=4"></script>
   </body>
 </html>

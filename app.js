@@ -114,14 +114,51 @@ function setActiveKpi(tabKey) {
   });
 }
 
+const PIPELINE_STAGES = [
+  {
+    key: "raw",
+    num: "Шаг 1",
+    title: "Сбор с источников",
+    short: "Сбор",
+    desc: "Всё, что нашли роботы на сайтах министерств и порталов — ссылки, страницы, черновики записей.",
+    color: COLORS.gray,
+  },
+  {
+    key: "refined",
+    num: "Шаг 2",
+    title: "Очистка данных",
+    short: "Очистка",
+    desc: "Убрали дубликаты, битые ссылки и технический мусор. Остались уникальные записи для анализа.",
+    color: COLORS.blue,
+  },
+  {
+    key: "apps",
+    num: "Шаг 3",
+    title: "Грантовые заявки",
+    short: "Заявки",
+    desc: "Из очищённых записей выделили реальные конкурсы и программы финансирования (не просто страницы-справочники).",
+    color: COLORS.schwarz,
+  },
+  {
+    key: "split",
+    num: "Шаг 4",
+    title: "Фильтр A/B/C",
+    short: "Разбор",
+    desc: "Каждую заявку оценили по критериям BVUFSFJ: целевые (A+B) отдельно от отсеянных (C).",
+    color: COLORS.gold,
+  },
+];
+
 function svgFunnelChart(summary) {
   const W = 920;
-  const H = 240;
+  const H = 300;
   const padL = 44;
   const padR = 20;
-  const padB = 44;
-  const padT = 16;
-  const plotH = H - padB - padT;
+  const padB = 58;
+  const valueRowY = 32;
+  const plotTop = 48;
+  const plotBottom = H - padB;
+  const plotH = plotBottom - plotTop;
 
   const raw = summary.raw_count ?? 0;
   const refined = summary.refined_count ?? 0;
@@ -138,67 +175,113 @@ function svgFunnelChart(summary) {
     return (plotH * v) / max;
   }
 
+  function valueLabel(cx, val, extra) {
+    return `
+      <text x="${cx}" y="${valueRowY}" text-anchor="middle" font-size="22" font-weight="700" fill="#1c1c1c">${val}</text>
+      ${extra || ""}`;
+  }
+
   const stages = [
-    { label: "Сырые", value: raw, color: COLORS.gray },
-    { label: "Очищённые", value: refined, color: COLORS.blue },
-    { label: "Заявки", value: apps, color: COLORS.schwarz },
+    { short: "Сбор", value: raw, color: COLORS.gray },
+    { short: "Очистка", value: refined, color: COLORS.blue },
+    { short: "Заявки", value: apps, color: COLORS.schwarz },
   ];
 
-  let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="Воронка обработки лидов">`;
-  svg += `<line x1="${padL}" y1="${H - padB}" x2="${W - padR}" y2="${H - padB}" stroke="#d4d4d4"/>`;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="Воронка обработки лидов" style="overflow:visible">`;
+  svg += `<line x1="${padL}" y1="${plotBottom}" x2="${W - padR}" y2="${plotBottom}" stroke="#ccc" stroke-width="1.5"/>`;
 
   stages.forEach((s, i) => {
     const h = barHeight(s.value);
     const x = padL + i * (barW + gap);
-    const y = H - padB - h;
-    svg += `<rect x="${x}" y="${y}" width="${barW}" height="${h}" rx="5" fill="${s.color}" opacity="0.9"/>`;
-    svg += `<text x="${x + barW / 2}" y="${y - 10}" text-anchor="middle" font-size="16" font-weight="700" fill="#1c1c1c">${s.value}</text>`;
-    svg += `<text x="${x + barW / 2}" y="${H - 18}" text-anchor="middle" font-size="14" fill="#444">${s.label}</text>`;
+    const y = plotBottom - h;
+    const cx = x + barW / 2;
+    svg += `<rect x="${x}" y="${y}" width="${barW}" height="${h}" rx="6" fill="${s.color}" opacity="0.92"/>`;
+    svg += valueLabel(cx, s.value);
+    svg += `<text x="${cx}" y="${H - 36}" text-anchor="middle" font-size="15" font-weight="700" fill="#1c1c1c">${s.short}</text>`;
+    svg += `<text x="${cx}" y="${H - 18}" text-anchor="middle" font-size="12" fill="#666">${s.value} шт.</text>`;
   });
 
   const stackX = padL + 3 * (barW + gap);
+  const stackCx = stackX + barW / 2;
   const totalH = barHeight(apps);
   const targetH = apps > 0 ? (totalH * target) / apps : 0;
   const excludedH = apps > 0 ? (totalH * excluded) / apps : 0;
-  const baseY = H - padB;
 
   if (apps > 0) {
-    svg += `<rect x="${stackX}" y="${baseY - targetH}" width="${barW}" height="${targetH}" rx="5" fill="${COLORS.gold}" opacity="0.95"/>`;
+    svg += `<rect x="${stackX}" y="${plotBottom - targetH}" width="${barW}" height="${targetH}" rx="6" fill="${COLORS.gold}" opacity="0.95"/>`;
     if (excludedH > 0) {
-      svg += `<rect x="${stackX}" y="${baseY - targetH - excludedH}" width="${barW}" height="${excludedH}" rx="5" fill="${COLORS.rot}" opacity="0.9"/>`;
+      svg += `<rect x="${stackX}" y="${plotBottom - targetH - excludedH}" width="${barW}" height="${excludedH}" rx="6" fill="${COLORS.rot}" opacity="0.92"/>`;
     }
-    svg += `<text x="${stackX + barW / 2}" y="${baseY - totalH - 12}" text-anchor="middle" font-size="16" font-weight="700" fill="#1c1c1c">${apps}</text>`;
-    if (targetH > 20) {
-      svg += `<text x="${stackX + barW / 2}" y="${baseY - targetH / 2}" text-anchor="middle" font-size="14" font-weight="700" fill="#5c4a00">${target}</text>`;
+    svg += valueLabel(stackCx, apps, `<text x="${stackCx}" y="${valueRowY + 18}" text-anchor="middle" font-size="11" fill="#666">всего заявок</text>`);
+    if (targetH > 22) {
+      svg += `<text x="${stackCx}" y="${plotBottom - targetH / 2 + 5}" text-anchor="middle" font-size="15" font-weight="700" fill="#5c4a00">${target}</text>`;
     }
-    if (excludedH > 16) {
-      svg += `<text x="${stackX + barW / 2}" y="${baseY - targetH - excludedH / 2}" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">${excluded}</text>`;
+    if (excludedH > 18) {
+      svg += `<text x="${stackCx}" y="${plotBottom - targetH - excludedH / 2 + 5}" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">${excluded}</text>`;
     }
   }
 
-  svg += `<text x="${stackX + barW / 2}" y="${H - 18}" text-anchor="middle" font-size="14" fill="#444">Разбор заявок</text>`;
+  svg += `<text x="${stackCx}" y="${H - 36}" text-anchor="middle" font-size="15" font-weight="700" fill="#1c1c1c">Разбор</text>`;
+  svg += `<text x="${stackCx}" y="${H - 18}" text-anchor="middle" font-size="12" fill="#666">${target} цел. + ${excluded} отс.</text>`;
   svg += `</svg>`;
 
   return svg;
 }
 
+function buildPipelineSteps(summary) {
+  const target = summary.our_leads_count ?? 0;
+  const excluded = summary.excluded_count ?? 0;
+  const vals = {
+    raw: summary.raw_count ?? 0,
+    refined: summary.refined_count ?? 0,
+    apps: summary.application_count ?? 0,
+    split: `${target} цел. / ${excluded} отс.`,
+  };
+
+  return PIPELINE_STAGES.map(
+    (s) => `
+    <div class="pipeline-step" style="--step-color:${s.color}">
+      <div class="step-num">${s.num}</div>
+      <div class="step-title">${s.title}</div>
+      <div class="step-desc">${s.desc}</div>
+      <div class="step-val">${vals[s.key]}</div>
+    </div>`,
+  ).join("");
+}
+
 function buildCharts(summary) {
   const el = document.getElementById("charts");
+  const target = summary.our_leads_count ?? 0;
+  const excluded = summary.excluded_count ?? 0;
+  const apps = summary.application_count ?? 0;
+  const raw = summary.raw_count ?? 0;
+  const refined = summary.refined_count ?? 0;
+
   el.innerHTML = `
     <div class="panel">
-      <div class="panel-head">Воронка обработки лидов</div>
+      <div class="panel-head">
+        <div class="panel-head-title">Как работает мониторинг — демо пайплайна</div>
+        <p class="panel-head-desc">
+          Автоматический сбор грантовых возможностей с ${summary.source_pages_count ?? "—"} страниц источников,
+          очистка, отбор заявок и фильтр A/B/C по критериям организации.
+        </p>
+      </div>
       <div class="panel-body">
-        ${svgFunnelChart(summary)}
+        <div class="chart-wrap">${svgFunnelChart(summary)}</div>
         <div class="chart-legend">
-          <span><i style="background:${COLORS.gray}"></i> Сырые записи</span>
-          <span><i style="background:${COLORS.blue}"></i> После очистки</span>
-          <span><i style="background:${COLORS.schwarz}"></i> Заявки (application)</span>
-          <span><i style="background:${COLORS.gold}"></i> Целевые (${summary.our_leads_count ?? 0})</span>
-          <span><i style="background:${COLORS.rot}"></i> Отсеянные (${summary.excluded_count ?? 0})</span>
+          <span><i style="background:${COLORS.gray}"></i> Шаг 1 — сбор</span>
+          <span><i style="background:${COLORS.blue}"></i> Шаг 2 — очистка</span>
+          <span><i style="background:${COLORS.schwarz}"></i> Шаг 3 — заявки</span>
+          <span><i style="background:${COLORS.gold}"></i> Целевые (${target})</span>
+          <span><i style="background:${COLORS.rot}"></i> Отсеянные (${excluded})</span>
         </div>
-        <div class="chart-caption">
-          Последний столбец — состав из ${summary.application_count ?? 0} заявок:
-          ${summary.our_leads_count ?? 0} целевых + ${summary.excluded_count ?? 0} отсеянных = ${(summary.our_leads_count ?? 0) + (summary.excluded_count ?? 0)}
+        <div class="pipeline-steps">${buildPipelineSteps(summary)}</div>
+        <div class="chart-summary">
+          <strong>Итог демо-прогона:</strong> из <strong>${raw}</strong> найденных записей
+          → <strong>${refined}</strong> после очистки
+          → <strong>${apps}</strong> грантовых заявок
+          → <strong>${target}</strong> целевых (A+B) и <strong>${excluded}</strong> отсеянных (C).
+          Данные обновлены ${summary.updated_at ? ` ${summary.updated_at}` : ""}.
         </div>
       </div>
     </div>`;
