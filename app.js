@@ -142,8 +142,8 @@ const PIPELINE_STAGES = [
   {
     key: "split",
     num: "Шаг 4",
-    title: "Фильтр A/B/C",
-    short: "Разбор",
+    title: "Лиды A/B/C",
+    short: "Лиды",
     desc: "Каждую заявку оценили по критериям BVUFSFJ: целевые (A+B) отдельно от отсеянных (C).",
     color: COLORS.gold,
   },
@@ -221,7 +221,7 @@ function svgFunnelChart(summary) {
     }
   }
 
-  svg += `<text x="${stackCx}" y="${H - 36}" text-anchor="middle" font-size="15" font-weight="700" fill="#1c1c1c">Разбор</text>`;
+  svg += `<text x="${stackCx}" y="${H - 36}" text-anchor="middle" font-size="15" font-weight="700" fill="#1c1c1c">Лиды</text>`;
   svg += `<text x="${stackCx}" y="${H - 18}" text-anchor="middle" font-size="12" fill="#666">${target} цел. + ${excluded} отс.</text>`;
   svg += `</svg>`;
 
@@ -380,7 +380,7 @@ function renderList(items, { mode = "our" } = {}) {
               ${showFitWhy ? "<th>Обоснование оценки</th>" : ""}
               <th>Публикация</th>
               <th>Старт</th>
-              <th>Дедлайн</th>
+              <th>Конец</th>
               <th>Статус</th>
               <th>Ссылка</th>
             </tr>
@@ -444,8 +444,8 @@ function wireFilters(payload) {
       if (src && i.source_name !== src) return false;
       if (st && i.status !== st) return false;
       if (gf && i.fit_grade !== gf) return false;
-      if (df === "with_dates" && !i.deadline_date && !i.start_date) return false;
-      if (df === "no_dates" && (i.deadline_date || i.start_date)) return false;
+      if (df === "with_dates" && !i.has_calendar_dates) return false;
+      if (df === "no_dates" && i.has_calendar_dates) return false;
       if (query) {
         const hay = `${i.title} ${i.source_name} ${i.url} ${i.description} ${formatFitWhy(i)}`.toLowerCase();
         if (!hay.includes(query)) return false;

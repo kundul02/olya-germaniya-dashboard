@@ -11,7 +11,7 @@
     "excluded_count": 5,
     "our_leads_count": 13,
     "filter_rules_version": "0.1",
-    "updated_at": "2026-06-10 18:03:07"
+    "updated_at": "2026-06-10 18:52:08"
   },
   "items": [
     {
@@ -24,9 +24,9 @@
       "title": "BMBFSFJ Home: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/bmbfsfj-als-arbeitgeber/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -40,7 +40,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber"
+      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber",
+      "has_calendar_dates": false
     },
     {
       "id": "L002",
@@ -52,9 +53,9 @@
       "title": "BMBFSFJ Home: ausschreibungen foerderung",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -75,7 +76,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L003",
@@ -87,9 +89,9 @@
       "title": "BMBFSFJ Home: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -110,7 +112,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L004",
@@ -122,9 +125,9 @@
       "title": "BMBFSFJ Home: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -145,7 +148,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L005",
@@ -157,9 +161,9 @@
       "title": "ESF Sample Aufruf: 2026 05 21 aufruf bmbfsfj integrationskurs",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/SharedDocs/Meldungen/DE/Aufrufe/2026_05_21_aufruf_bmbfsfj_integrationskurs.html",
-      "publication_date": "2026-05-21",
-      "start_date": "",
-      "deadline_date": "2027-12-31",
+      "publication_date": "21.05.2026",
+      "start_date": "с 21.05.2026",
+      "deadline_date": "31.12.2027",
       "rolling": false,
       "lead_type": "application",
       "lead_reason": "дедлайн со страницы (Frist/Deadline)",
@@ -176,7 +180,8 @@
       "fit_unknown": [
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": true
     },
     {
       "id": "L006",
@@ -188,9 +193,9 @@
       "title": "ESF Sample Aufruf: 2026 05 21 aufruf bmbfsfj integrationskurs?nn=cb0bacd5 000a...",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/SharedDocs/Meldungen/DE/Aufrufe/2026_05_21_aufruf_bmbfsfj_integrationskurs.html?nn=cb0bacd5-000a-4180-9e40-4cda7814a0a0",
-      "publication_date": "2026-05-21",
-      "start_date": "",
-      "deadline_date": "2027-12-31",
+      "publication_date": "21.05.2026",
+      "start_date": "с 21.05.2026",
+      "deadline_date": "31.12.2027",
       "rolling": false,
       "lead_type": "application",
       "lead_reason": "дедлайн со страницы (Frist/Deadline)",
@@ -207,7 +212,8 @@
       "fit_unknown": [
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": true
     },
     {
       "id": "L007",
@@ -219,9 +225,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/Ueber-den-ESF/Der-Weg-zur-Foerderung/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -235,7 +241,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L008",
@@ -247,9 +254,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Foerderschwerpunkte/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -263,7 +270,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L009",
@@ -275,9 +283,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Foerderprogramme/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -291,7 +299,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L010",
@@ -303,9 +312,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Aufrufe/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "2026-12-31",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "31.12.2026",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist · дедлайн со страницы (Frist/Deadline)",
@@ -322,7 +331,8 @@
         "тема не найдена в тексте",
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": "Нет релевантной тематики"
+      "exclude_reason": "Нет релевантной тематики",
+      "has_calendar_dates": false
     },
     {
       "id": "L011",
@@ -334,9 +344,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-2014-2020/Foerderschwerpunkte/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -350,7 +360,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L012",
@@ -362,9 +373,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-2014-2020/Foerderprogramme/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -378,7 +389,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L013",
@@ -390,9 +402,9 @@
       "title": "BMBFSFJ Ausschreibungen: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/bmbfsfj-als-arbeitgeber/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -406,7 +418,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber"
+      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber",
+      "has_calendar_dates": false
     },
     {
       "id": "L014",
@@ -418,9 +431,9 @@
       "title": "BMBFSFJ Ausschreibungen: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -441,7 +454,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L015",
@@ -453,9 +467,9 @@
       "title": "BMBFSFJ Ausschreibungen: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -476,7 +490,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L016",
@@ -488,9 +503,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/bmbfsfj-als-arbeitgeber/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -504,7 +519,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber"
+      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber",
+      "has_calendar_dates": false
     },
     {
       "id": "L017",
@@ -516,9 +532,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen foerderung",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -539,7 +555,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L018",
@@ -551,9 +568,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -574,7 +591,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L019",
@@ -586,9 +604,9 @@
       "title": "BMBFSFJ RSS Service: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -609,7 +627,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L020",
@@ -621,9 +640,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Aufrufe/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "2026-12-31",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "31.12.2026",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist · дедлайн со страницы (Frist/Deadline)",
@@ -640,7 +659,8 @@
         "тема не найдена в тексте",
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": "Нет релевантной тематики"
+      "exclude_reason": "Нет релевантной тематики",
+      "has_calendar_dates": false
     },
     {
       "id": "L021",
@@ -652,9 +672,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/Ueber-den-ESF/Der-Weg-zur-Foerderung/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -668,7 +688,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L022",
@@ -680,9 +701,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Foerderschwerpunkte/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -696,7 +717,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L023",
@@ -708,9 +730,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Foerderprogramme/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -724,7 +746,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L024",
@@ -736,9 +759,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-2014-2020/Foerderschwerpunkte/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -752,7 +775,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L025",
@@ -764,9 +788,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-2014-2020/Foerderprogramme/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -780,7 +804,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L026",
@@ -792,9 +817,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/Ueber-den-ESF/Geschichte-des-ESF/Foerderperiode-2007-2013/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -808,7 +833,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L027",
@@ -820,9 +846,9 @@
       "title": "BAMF Integrationsprojekte: integrationsprojekte node",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bamf.de/DE/Themen/Integration/TraegerLehrFachkraefte/TraegerProjektfoerderung/Integrationsprojekte/integrationsprojekte-node.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -836,7 +862,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L028",
@@ -848,9 +875,9 @@
       "title": "BGZ Root: projektschmiede",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektschmiede",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -864,7 +891,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L029",
@@ -876,9 +904,9 @@
       "title": "BGZ Root: projektwissen",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -892,7 +920,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L030",
@@ -904,9 +933,9 @@
       "title": "BGZ Root: alle erklaervideos auf einen blick",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/alle-erklaervideos-auf-einen-blick",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -920,7 +949,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L031",
@@ -932,9 +962,9 @@
       "title": "BGZ Root: bedarfsanalyse",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/bedarfsanalyse",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -948,7 +978,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L032",
@@ -960,9 +991,9 @@
       "title": "BGZ Root: integrationsarbeit in der praxis",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/integrationsarbeit-in-der-praxis",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -976,7 +1007,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L033",
@@ -988,9 +1020,9 @@
       "title": "BGZ Root: tipps fuer projektskizzen",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/tipps-fuer-projektskizzen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1004,7 +1036,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L034",
@@ -1016,9 +1049,9 @@
       "title": "BGZ Root: oeffentlichkeitsarbeit",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/oeffentlichkeitsarbeit",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1032,7 +1065,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L035",
@@ -1044,9 +1078,9 @@
       "title": "BGZ Root: projektmanagement",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/projektmanagement",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1060,7 +1094,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L036",
@@ -1072,9 +1107,9 @@
       "title": "Intmiki Plus Aktuelles: foerderung einer integrationskursbegleitenden kinderbeaufsic...",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.fruehe-chancen.de/news/detail/foerderung-einer-integrationskursbegleitenden-kinderbeaufsichtigung-laeuft-als-neues-esf-plus-foerderprogramm-weiter",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "2024-01-01",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "01.01.2024",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1088,7 +1123,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L037",
@@ -1100,9 +1136,9 @@
       "title": "Integrationsbeauftragte Projektfoerderung: projektfoerderung",
       "description": "IBV/Interessenbekundung и проектное финансирование.",
       "url": "https://www.integrationsbeauftragte.de/ib-de/integrationsarbeit-in-den-bereichen/projektfoerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1116,7 +1152,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L038",
@@ -1128,9 +1165,9 @@
       "title": "Integrationsbeauftragte IBV Example: oeffentliche bekanntmachung eines interessenbekundungsverfah...",
       "description": "IBV/Interessenbekundung и проектное финансирование.",
       "url": "https://www.integrationsbeauftragte.de/ib-de/integrationsarbeit-in-den-bereichen/projektfoerderung/oeffentliche-bekanntmachung-eines-interessenbekundungsverfahrens-2305116",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1144,7 +1181,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L039",
@@ -1156,9 +1194,9 @@
       "title": "Integrationsbeauftragte IBV Example: projektfoerderung",
       "description": "IBV/Interessenbekundung и проектное финансирование.",
       "url": "https://www.integrationsbeauftragte.de/ib-de/integrationsarbeit-in-den-bereichen/projektfoerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1172,7 +1210,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L040",
@@ -1184,9 +1223,9 @@
       "title": "Integrationsbeauftragte IBV Example: aufruf interessenbekundungsverfahren data.docx?download=1",
       "description": "IBV/Interessenbekundung и проектное финансирование.",
       "url": "https://www.integrationsbeauftragte.de/resource/blob/1865332/2304934/2fc67d4995ef46acf29fe74c3691cdec/aufruf-interessenbekundungsverfahren-data.docx?download=1",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1200,7 +1239,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L041",
@@ -1212,9 +1252,9 @@
       "title": "AMIF Foerderaufruf 2026: foerderaufruf 2026?  blob=publicationFile&v=2",
       "description": "EU-фонд AMIF: страницы Förderaufruf/Förderung.",
       "url": "https://www.eu-migrationsfonds.de/SharedDocs/Anlagen/DE/Foerderung/foerderaufruf-2026.pdf?__blob=publicationFile&v=2",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1228,7 +1268,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L042",
@@ -1240,9 +1281,9 @@
       "title": "AMIF Foerderaufruf 2026: foerderhandbuch 2025?  blob=publicationFile&v=4",
       "description": "EU-фонд AMIF: страницы Förderaufruf/Förderung.",
       "url": "https://www.eu-migrationsfonds.de/SharedDocs/Anlagen/DE/Foerderung/foerderhandbuch-2025.pdf?__blob=publicationFile&v=4",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1256,7 +1297,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L043",
@@ -1268,9 +1310,9 @@
       "title": "BAMF Foerderangebote: foerderangebote node",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bamf.de/DE/Themen/Foerderangebote/foerderangebote-node.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1284,7 +1326,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L044",
@@ -1296,9 +1339,9 @@
       "title": "BAFzA Demokratie leben: demokratie leben",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.bafza.de/programme-und-foerderungen/demokratie-leben",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1312,7 +1355,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L045",
@@ -1324,9 +1368,9 @@
       "title": "BAFzA Demokratie leben: demokratie leben?amp%3Btx bafzacookiebar pi1%5Baction%5D=clo...",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.bafza.de/programme-und-foerderungen/demokratie-leben?amp%3Btx_bafzacookiebar_pi1%5Baction%5D=closeCookieBar&amp%3Btx_bafzacookiebar_pi1%5Bcontroller%5D=CookieWarning&amp%3Btx_bafzacookiebar_pi1%5Bstorage%5D=459&amp%3Btype=314638125&amp%3BcHash=d8b9dcf340c76d01c4bff5d2a367fda7",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1340,7 +1384,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L046",
@@ -1352,9 +1397,9 @@
       "title": "BAFzA Demokratie leben: demokratie leben?amp%3Btx bafzacookiebar pi1%5Baction%5D=clo...",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.bafza.de/programme-und-foerderungen/demokratie-leben?amp%3Btx_bafzacookiebar_pi1%5Baction%5D=closeCookieBar&amp%3Btx_bafzacookiebar_pi1%5Bcontroller%5D=CookieWarning&amp%3Btx_bafzacookiebar_pi1%5Bstorage%5D=459&amp%3Btype=314638125&amp%3BcHash=83e715da7cfb8ae0afbe6894d6232639",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1368,7 +1413,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L047",
@@ -1380,9 +1426,9 @@
       "title": "BAFzA Demokratie leben: programme und foerderungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bafza.de/programme-und-foerderungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1396,7 +1442,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L048",
@@ -1408,9 +1455,9 @@
       "title": "BAFzA Demokratie leben: alter neu denken altersbilder",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bafza.de/programme-und-foerderungen/alter-neu-denken-altersbilder",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1424,7 +1471,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L049",
@@ -1436,9 +1484,9 @@
       "title": "Demokratie leben Root: foerderportal.demokratie leben.de",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://foerderportal.demokratie-leben.de/",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1452,7 +1500,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L050",
@@ -1464,9 +1513,9 @@
       "title": "Demokratie leben Root: innovationsprojekte",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/programm/programmbereiche/innovationsprojekte",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1480,7 +1529,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L051",
@@ -1492,9 +1542,9 @@
       "title": "Demokratie leben Root: foerderung",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1508,7 +1558,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L052",
@@ -1520,9 +1571,9 @@
       "title": "Demokratie leben Root: foerdermoeglichkeiten",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/foerdermoeglichkeiten",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -1542,7 +1593,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L053",
@@ -1554,9 +1606,9 @@
       "title": "Demokratie leben Root: wen wir foerdern",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/wen-wir-foerdern",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -1577,7 +1629,8 @@
         "тип заявителя не указан на странице",
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L054",
@@ -1589,9 +1642,9 @@
       "title": "Demokratie leben Root: fruehere foerderperioden",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/fruehere-foerderperioden",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -1612,7 +1665,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L055",
@@ -1624,9 +1678,9 @@
       "title": "Demokratie leben Root: projektpraxis",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/projektpraxis",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1640,7 +1694,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L056",
@@ -1652,9 +1707,9 @@
       "title": "Demokratie leben Root: magazin",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/projektpraxis/magazin",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1668,7 +1723,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L057",
@@ -1680,9 +1736,9 @@
       "title": "PfD Heidekreis: ausschreibungen 2",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.heidekreis.de/aktuelles/ausschreibungen-2.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1696,7 +1752,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L058",
@@ -1708,9 +1765,9 @@
       "title": "PfD Heidekreis: foerderung",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.heidekreis.de/gesundheit-soziales/demokratie-leben/foerderung.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1724,7 +1781,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L059",
@@ -1736,9 +1794,9 @@
       "title": "PfD Sankt Wendel: PfD Antragsformular2025",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://pfd.landkreis-st-wendel.de/fileadmin/user_upload/PDF-Dateien/2025/PfD_Antragsformular2025.pdf",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1752,7 +1810,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L060",
@@ -1764,9 +1823,9 @@
       "title": "PfD Sankt Wendel: foerderrichtlinie des bundesprogramms demokratie leben aende...",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://pfd.landkreis-st-wendel.de/fileadmin/user_upload/PDF-Dateien/2025/foerderrichtlinie-des-bundesprogramms-demokratie-leben-aenderung-2024-data.pdf",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1780,7 +1839,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L061",
@@ -1792,9 +1852,9 @@
       "title": "PfD Mansfeld-Suedharz: foerderfonds",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://partnerschaft-fuer-demokratie-msh.de/foerderfonds/",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -1808,7 +1868,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L062",
@@ -1820,13 +1881,13 @@
       "title": "PfD Mansfeld-Suedharz: foerdermoeglichkeiten",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://partnerschaft-fuer-demokratie-msh.de/foerdermoeglichkeiten/",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
-      "rolling": false,
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
+      "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
-      "status": "unknown",
+      "status": "rolling",
       "note": "Старт/дедлайн показываются только при контекстном совпадении с ключевыми словами.",
       "fit_grade": "source",
       "fit_label": "source_page",
@@ -1836,7 +1897,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     }
   ],
   "our_leads": [
@@ -1850,9 +1912,9 @@
       "title": "BMBFSFJ Home: ausschreibungen foerderung",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -1873,7 +1935,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L003",
@@ -1885,9 +1948,9 @@
       "title": "BMBFSFJ Home: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -1908,7 +1971,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L004",
@@ -1920,9 +1984,9 @@
       "title": "BMBFSFJ Home: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -1943,7 +2007,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L014",
@@ -1955,9 +2020,9 @@
       "title": "BMBFSFJ Ausschreibungen: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -1978,7 +2043,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L015",
@@ -1990,9 +2056,9 @@
       "title": "BMBFSFJ Ausschreibungen: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2013,7 +2079,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L017",
@@ -2025,9 +2092,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen foerderung",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2048,7 +2115,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L018",
@@ -2060,9 +2128,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2083,7 +2151,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L019",
@@ -2095,9 +2164,9 @@
       "title": "BMBFSFJ RSS Service: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2118,7 +2187,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L052",
@@ -2130,9 +2200,9 @@
       "title": "Demokratie leben Root: foerdermoeglichkeiten",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/foerdermoeglichkeiten",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2152,7 +2222,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L054",
@@ -2164,9 +2235,9 @@
       "title": "Demokratie leben Root: fruehere foerderperioden",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/fruehere-foerderperioden",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2187,7 +2258,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L005",
@@ -2199,9 +2271,9 @@
       "title": "ESF Sample Aufruf: 2026 05 21 aufruf bmbfsfj integrationskurs",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/SharedDocs/Meldungen/DE/Aufrufe/2026_05_21_aufruf_bmbfsfj_integrationskurs.html",
-      "publication_date": "2026-05-21",
-      "start_date": "",
-      "deadline_date": "2027-12-31",
+      "publication_date": "21.05.2026",
+      "start_date": "с 21.05.2026",
+      "deadline_date": "31.12.2027",
       "rolling": false,
       "lead_type": "application",
       "lead_reason": "дедлайн со страницы (Frist/Deadline)",
@@ -2218,7 +2290,8 @@
       "fit_unknown": [
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": true
     },
     {
       "id": "L006",
@@ -2230,9 +2303,9 @@
       "title": "ESF Sample Aufruf: 2026 05 21 aufruf bmbfsfj integrationskurs?nn=cb0bacd5 000a...",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/SharedDocs/Meldungen/DE/Aufrufe/2026_05_21_aufruf_bmbfsfj_integrationskurs.html?nn=cb0bacd5-000a-4180-9e40-4cda7814a0a0",
-      "publication_date": "2026-05-21",
-      "start_date": "",
-      "deadline_date": "2027-12-31",
+      "publication_date": "21.05.2026",
+      "start_date": "с 21.05.2026",
+      "deadline_date": "31.12.2027",
       "rolling": false,
       "lead_type": "application",
       "lead_reason": "дедлайн со страницы (Frist/Deadline)",
@@ -2249,7 +2322,8 @@
       "fit_unknown": [
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": true
     },
     {
       "id": "L053",
@@ -2261,9 +2335,9 @@
       "title": "Demokratie leben Root: wen wir foerdern",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/wen-wir-foerdern",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2284,7 +2358,8 @@
         "тип заявителя не указан на странице",
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     }
   ],
   "strong_leads": [
@@ -2298,9 +2373,9 @@
       "title": "BMBFSFJ Home: ausschreibungen foerderung",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2321,7 +2396,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L003",
@@ -2333,9 +2409,9 @@
       "title": "BMBFSFJ Home: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2356,7 +2432,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L004",
@@ -2368,9 +2445,9 @@
       "title": "BMBFSFJ Home: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2391,7 +2468,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L014",
@@ -2403,9 +2481,9 @@
       "title": "BMBFSFJ Ausschreibungen: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2426,7 +2504,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L015",
@@ -2438,9 +2517,9 @@
       "title": "BMBFSFJ Ausschreibungen: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2461,7 +2540,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L017",
@@ -2473,9 +2553,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen foerderung",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2496,7 +2576,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L018",
@@ -2508,9 +2589,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2531,7 +2612,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L019",
@@ -2543,9 +2625,9 @@
       "title": "BMBFSFJ RSS Service: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2566,7 +2648,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L052",
@@ -2578,9 +2661,9 @@
       "title": "Demokratie leben Root: foerdermoeglichkeiten",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/foerdermoeglichkeiten",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2600,7 +2683,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L054",
@@ -2612,9 +2696,9 @@
       "title": "Demokratie leben Root: fruehere foerderperioden",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/fruehere-foerderperioden",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2635,7 +2719,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     }
   ],
   "review_needed": [
@@ -2649,9 +2734,9 @@
       "title": "ESF Sample Aufruf: 2026 05 21 aufruf bmbfsfj integrationskurs",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/SharedDocs/Meldungen/DE/Aufrufe/2026_05_21_aufruf_bmbfsfj_integrationskurs.html",
-      "publication_date": "2026-05-21",
-      "start_date": "",
-      "deadline_date": "2027-12-31",
+      "publication_date": "21.05.2026",
+      "start_date": "с 21.05.2026",
+      "deadline_date": "31.12.2027",
       "rolling": false,
       "lead_type": "application",
       "lead_reason": "дедлайн со страницы (Frist/Deadline)",
@@ -2668,7 +2753,8 @@
       "fit_unknown": [
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": true
     },
     {
       "id": "L006",
@@ -2680,9 +2766,9 @@
       "title": "ESF Sample Aufruf: 2026 05 21 aufruf bmbfsfj integrationskurs?nn=cb0bacd5 000a...",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/SharedDocs/Meldungen/DE/Aufrufe/2026_05_21_aufruf_bmbfsfj_integrationskurs.html?nn=cb0bacd5-000a-4180-9e40-4cda7814a0a0",
-      "publication_date": "2026-05-21",
-      "start_date": "",
-      "deadline_date": "2027-12-31",
+      "publication_date": "21.05.2026",
+      "start_date": "с 21.05.2026",
+      "deadline_date": "31.12.2027",
       "rolling": false,
       "lead_type": "application",
       "lead_reason": "дедлайн со страницы (Frist/Deadline)",
@@ -2699,7 +2785,8 @@
       "fit_unknown": [
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": true
     },
     {
       "id": "L053",
@@ -2711,9 +2798,9 @@
       "title": "Demokratie leben Root: wen wir foerdern",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/wen-wir-foerdern",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2734,7 +2821,8 @@
         "тип заявителя не указан на странице",
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     }
   ],
   "excluded_leads": [
@@ -2748,9 +2836,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Aufrufe/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "2026-12-31",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "31.12.2026",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist · дедлайн со страницы (Frist/Deadline)",
@@ -2767,7 +2855,8 @@
         "тема не найдена в тексте",
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": "Нет релевантной тематики"
+      "exclude_reason": "Нет релевантной тематики",
+      "has_calendar_dates": false
     },
     {
       "id": "L020",
@@ -2779,9 +2868,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Aufrufe/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "2026-12-31",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "31.12.2026",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist · дедлайн со страницы (Frist/Deadline)",
@@ -2798,7 +2887,8 @@
         "тема не найдена в тексте",
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": "Нет релевантной тематики"
+      "exclude_reason": "Нет релевантной тематики",
+      "has_calendar_dates": false
     },
     {
       "id": "L001",
@@ -2810,9 +2900,9 @@
       "title": "BMBFSFJ Home: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/bmbfsfj-als-arbeitgeber/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2826,7 +2916,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber"
+      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber",
+      "has_calendar_dates": false
     },
     {
       "id": "L013",
@@ -2838,9 +2929,9 @@
       "title": "BMBFSFJ Ausschreibungen: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/bmbfsfj-als-arbeitgeber/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2854,7 +2945,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber"
+      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber",
+      "has_calendar_dates": false
     },
     {
       "id": "L016",
@@ -2866,9 +2958,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/bmbfsfj-als-arbeitgeber/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2882,7 +2974,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber"
+      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber",
+      "has_calendar_dates": false
     }
   ],
   "application_leads": [
@@ -2896,9 +2989,9 @@
       "title": "BMBFSFJ Home: ausschreibungen foerderung",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2919,7 +3012,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L003",
@@ -2931,9 +3025,9 @@
       "title": "BMBFSFJ Home: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2954,7 +3048,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L004",
@@ -2966,9 +3061,9 @@
       "title": "BMBFSFJ Home: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -2989,7 +3084,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L014",
@@ -3001,9 +3097,9 @@
       "title": "BMBFSFJ Ausschreibungen: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3024,7 +3120,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L015",
@@ -3036,9 +3133,9 @@
       "title": "BMBFSFJ Ausschreibungen: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3059,7 +3156,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L017",
@@ -3071,9 +3169,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen foerderung",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3094,7 +3192,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L018",
@@ -3106,9 +3205,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3129,7 +3228,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L019",
@@ -3141,9 +3241,9 @@
       "title": "BMBFSFJ RSS Service: foerderrichtlinien",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/ausschreibungen-foerderung/foerderrichtlinien",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3164,7 +3264,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L052",
@@ -3176,9 +3277,9 @@
       "title": "Demokratie leben Root: foerdermoeglichkeiten",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/foerdermoeglichkeiten",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3198,7 +3299,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L054",
@@ -3210,9 +3312,9 @@
       "title": "Demokratie leben Root: fruehere foerderperioden",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/fruehere-foerderperioden",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3233,7 +3335,8 @@
       "fit_unknown": [
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L005",
@@ -3245,9 +3348,9 @@
       "title": "ESF Sample Aufruf: 2026 05 21 aufruf bmbfsfj integrationskurs",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/SharedDocs/Meldungen/DE/Aufrufe/2026_05_21_aufruf_bmbfsfj_integrationskurs.html",
-      "publication_date": "2026-05-21",
-      "start_date": "",
-      "deadline_date": "2027-12-31",
+      "publication_date": "21.05.2026",
+      "start_date": "с 21.05.2026",
+      "deadline_date": "31.12.2027",
       "rolling": false,
       "lead_type": "application",
       "lead_reason": "дедлайн со страницы (Frist/Deadline)",
@@ -3264,7 +3367,8 @@
       "fit_unknown": [
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": true
     },
     {
       "id": "L006",
@@ -3276,9 +3380,9 @@
       "title": "ESF Sample Aufruf: 2026 05 21 aufruf bmbfsfj integrationskurs?nn=cb0bacd5 000a...",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/SharedDocs/Meldungen/DE/Aufrufe/2026_05_21_aufruf_bmbfsfj_integrationskurs.html?nn=cb0bacd5-000a-4180-9e40-4cda7814a0a0",
-      "publication_date": "2026-05-21",
-      "start_date": "",
-      "deadline_date": "2027-12-31",
+      "publication_date": "21.05.2026",
+      "start_date": "с 21.05.2026",
+      "deadline_date": "31.12.2027",
       "rolling": false,
       "lead_type": "application",
       "lead_reason": "дедлайн со страницы (Frist/Deadline)",
@@ -3295,7 +3399,8 @@
       "fit_unknown": [
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": true
     },
     {
       "id": "L053",
@@ -3307,9 +3412,9 @@
       "title": "Demokratie leben Root: wen wir foerdern",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung/wen-wir-foerdern",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3330,7 +3435,8 @@
         "тип заявителя не указан на странице",
         "география не указана"
       ],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L010",
@@ -3342,9 +3448,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Aufrufe/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "2026-12-31",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "31.12.2026",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist · дедлайн со страницы (Frist/Deadline)",
@@ -3361,7 +3467,8 @@
         "тема не найдена в тексте",
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": "Нет релевантной тематики"
+      "exclude_reason": "Нет релевантной тематики",
+      "has_calendar_dates": false
     },
     {
       "id": "L020",
@@ -3373,9 +3480,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Aufrufe/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "2026-12-31",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "31.12.2026",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist · дедлайн со страницы (Frist/Deadline)",
@@ -3392,7 +3499,8 @@
         "тема не найдена в тексте",
         "тип заявителя не указан на странице"
       ],
-      "exclude_reason": "Нет релевантной тематики"
+      "exclude_reason": "Нет релевантной тематики",
+      "has_calendar_dates": false
     },
     {
       "id": "L001",
@@ -3404,9 +3512,9 @@
       "title": "BMBFSFJ Home: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/bmbfsfj-als-arbeitgeber/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3420,7 +3528,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber"
+      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber",
+      "has_calendar_dates": false
     },
     {
       "id": "L013",
@@ -3432,9 +3541,9 @@
       "title": "BMBFSFJ Ausschreibungen: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/bmbfsfj-als-arbeitgeber/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3448,7 +3557,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber"
+      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber",
+      "has_calendar_dates": false
     },
     {
       "id": "L016",
@@ -3460,9 +3570,9 @@
       "title": "BMBFSFJ RSS Service: ausschreibungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bmbfsfj.bund.de/bmbfsfj/ministerium/bmbfsfj-als-arbeitgeber/ausschreibungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "application",
       "lead_reason": "rolling — без фиксированной Frist",
@@ -3476,7 +3586,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber"
+      "exclude_reason": "URL-паттерн: bmbfsfj-als-arbeitgeber",
+      "has_calendar_dates": false
     }
   ],
   "source_pages": [
@@ -3490,9 +3601,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/Ueber-den-ESF/Der-Weg-zur-Foerderung/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3506,7 +3617,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L008",
@@ -3518,9 +3630,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Foerderschwerpunkte/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3534,7 +3646,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L009",
@@ -3546,9 +3659,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Foerderprogramme/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3562,7 +3675,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L011",
@@ -3574,9 +3688,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-2014-2020/Foerderschwerpunkte/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3590,7 +3704,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L012",
@@ -3602,9 +3717,9 @@
       "title": "ESF Sample Aufruf: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-2014-2020/Foerderprogramme/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3618,7 +3733,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L021",
@@ -3630,9 +3746,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/Ueber-den-ESF/Der-Weg-zur-Foerderung/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3646,7 +3762,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L022",
@@ -3658,9 +3775,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Foerderschwerpunkte/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3674,7 +3791,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L023",
@@ -3686,9 +3804,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-Plus-2021-2027/Foerderprogramme/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3702,7 +3820,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L024",
@@ -3714,9 +3833,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-2014-2020/Foerderschwerpunkte/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3730,7 +3849,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L025",
@@ -3742,9 +3862,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/ESF-2014-2020/Foerderprogramme/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3758,7 +3878,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L026",
@@ -3770,9 +3891,9 @@
       "title": "ESF Plus Aufrufe: inhalt",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.esf.de/portal/DE/Ueber-den-ESF/Geschichte-des-ESF/Foerderperiode-2007-2013/inhalt.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3786,7 +3907,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L027",
@@ -3798,9 +3920,9 @@
       "title": "BAMF Integrationsprojekte: integrationsprojekte node",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bamf.de/DE/Themen/Integration/TraegerLehrFachkraefte/TraegerProjektfoerderung/Integrationsprojekte/integrationsprojekte-node.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3814,7 +3936,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L028",
@@ -3826,9 +3949,9 @@
       "title": "BGZ Root: projektschmiede",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektschmiede",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3842,7 +3965,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L029",
@@ -3854,9 +3978,9 @@
       "title": "BGZ Root: projektwissen",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3870,7 +3994,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L030",
@@ -3882,9 +4007,9 @@
       "title": "BGZ Root: alle erklaervideos auf einen blick",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/alle-erklaervideos-auf-einen-blick",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3898,7 +4023,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L031",
@@ -3910,9 +4036,9 @@
       "title": "BGZ Root: bedarfsanalyse",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/bedarfsanalyse",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3926,7 +4052,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L032",
@@ -3938,9 +4065,9 @@
       "title": "BGZ Root: integrationsarbeit in der praxis",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/integrationsarbeit-in-der-praxis",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3954,7 +4081,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L033",
@@ -3966,9 +4094,9 @@
       "title": "BGZ Root: tipps fuer projektskizzen",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/tipps-fuer-projektskizzen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -3982,7 +4110,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L034",
@@ -3994,9 +4123,9 @@
       "title": "BGZ Root: oeffentlichkeitsarbeit",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/oeffentlichkeitsarbeit",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4010,7 +4139,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L035",
@@ -4022,9 +4152,9 @@
       "title": "BGZ Root: projektmanagement",
       "description": "BGZ/BAMF: Ausschreibungen, IBV и связанные материалы.",
       "url": "https://www.bgz-vorort.de/programm/projektwissen/projektmanagement",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4038,7 +4168,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L036",
@@ -4050,9 +4181,9 @@
       "title": "Intmiki Plus Aktuelles: foerderung einer integrationskursbegleitenden kinderbeaufsic...",
       "description": "ESF+ страницы с актуальными Aufruf и программами.",
       "url": "https://www.fruehe-chancen.de/news/detail/foerderung-einer-integrationskursbegleitenden-kinderbeaufsichtigung-laeuft-als-neues-esf-plus-foerderprogramm-weiter",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "2024-01-01",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "01.01.2024",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4066,7 +4197,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L037",
@@ -4078,9 +4210,9 @@
       "title": "Integrationsbeauftragte Projektfoerderung: projektfoerderung",
       "description": "IBV/Interessenbekundung и проектное финансирование.",
       "url": "https://www.integrationsbeauftragte.de/ib-de/integrationsarbeit-in-den-bereichen/projektfoerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4094,7 +4226,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L038",
@@ -4106,9 +4239,9 @@
       "title": "Integrationsbeauftragte IBV Example: oeffentliche bekanntmachung eines interessenbekundungsverfah...",
       "description": "IBV/Interessenbekundung и проектное финансирование.",
       "url": "https://www.integrationsbeauftragte.de/ib-de/integrationsarbeit-in-den-bereichen/projektfoerderung/oeffentliche-bekanntmachung-eines-interessenbekundungsverfahrens-2305116",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4122,7 +4255,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L039",
@@ -4134,9 +4268,9 @@
       "title": "Integrationsbeauftragte IBV Example: projektfoerderung",
       "description": "IBV/Interessenbekundung и проектное финансирование.",
       "url": "https://www.integrationsbeauftragte.de/ib-de/integrationsarbeit-in-den-bereichen/projektfoerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4150,7 +4284,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L040",
@@ -4162,9 +4297,9 @@
       "title": "Integrationsbeauftragte IBV Example: aufruf interessenbekundungsverfahren data.docx?download=1",
       "description": "IBV/Interessenbekundung и проектное финансирование.",
       "url": "https://www.integrationsbeauftragte.de/resource/blob/1865332/2304934/2fc67d4995ef46acf29fe74c3691cdec/aufruf-interessenbekundungsverfahren-data.docx?download=1",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4178,7 +4313,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L041",
@@ -4190,9 +4326,9 @@
       "title": "AMIF Foerderaufruf 2026: foerderaufruf 2026?  blob=publicationFile&v=2",
       "description": "EU-фонд AMIF: страницы Förderaufruf/Förderung.",
       "url": "https://www.eu-migrationsfonds.de/SharedDocs/Anlagen/DE/Foerderung/foerderaufruf-2026.pdf?__blob=publicationFile&v=2",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4206,7 +4342,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L042",
@@ -4218,9 +4355,9 @@
       "title": "AMIF Foerderaufruf 2026: foerderhandbuch 2025?  blob=publicationFile&v=4",
       "description": "EU-фонд AMIF: страницы Förderaufruf/Förderung.",
       "url": "https://www.eu-migrationsfonds.de/SharedDocs/Anlagen/DE/Foerderung/foerderhandbuch-2025.pdf?__blob=publicationFile&v=4",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4234,7 +4371,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L043",
@@ -4246,9 +4384,9 @@
       "title": "BAMF Foerderangebote: foerderangebote node",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bamf.de/DE/Themen/Foerderangebote/foerderangebote-node.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4262,7 +4400,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L044",
@@ -4274,9 +4413,9 @@
       "title": "BAFzA Demokratie leben: demokratie leben",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.bafza.de/programme-und-foerderungen/demokratie-leben",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4290,7 +4429,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L045",
@@ -4302,9 +4442,9 @@
       "title": "BAFzA Demokratie leben: demokratie leben?amp%3Btx bafzacookiebar pi1%5Baction%5D=clo...",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.bafza.de/programme-und-foerderungen/demokratie-leben?amp%3Btx_bafzacookiebar_pi1%5Baction%5D=closeCookieBar&amp%3Btx_bafzacookiebar_pi1%5Bcontroller%5D=CookieWarning&amp%3Btx_bafzacookiebar_pi1%5Bstorage%5D=459&amp%3Btype=314638125&amp%3BcHash=d8b9dcf340c76d01c4bff5d2a367fda7",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4318,7 +4458,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L046",
@@ -4330,9 +4471,9 @@
       "title": "BAFzA Demokratie leben: demokratie leben?amp%3Btx bafzacookiebar pi1%5Baction%5D=clo...",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.bafza.de/programme-und-foerderungen/demokratie-leben?amp%3Btx_bafzacookiebar_pi1%5Baction%5D=closeCookieBar&amp%3Btx_bafzacookiebar_pi1%5Bcontroller%5D=CookieWarning&amp%3Btx_bafzacookiebar_pi1%5Bstorage%5D=459&amp%3Btype=314638125&amp%3BcHash=83e715da7cfb8ae0afbe6894d6232639",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4346,7 +4487,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L047",
@@ -4358,9 +4500,9 @@
       "title": "BAFzA Demokratie leben: programme und foerderungen",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bafza.de/programme-und-foerderungen",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4374,7 +4516,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L048",
@@ -4386,9 +4529,9 @@
       "title": "BAFzA Demokratie leben: alter neu denken altersbilder",
       "description": "Потенциальный источник финансирования, требует review.",
       "url": "https://www.bafza.de/programme-und-foerderungen/alter-neu-denken-altersbilder",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4402,7 +4545,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L049",
@@ -4414,9 +4558,9 @@
       "title": "Demokratie leben Root: foerderportal.demokratie leben.de",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://foerderportal.demokratie-leben.de/",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4430,7 +4574,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L050",
@@ -4442,9 +4587,9 @@
       "title": "Demokratie leben Root: innovationsprojekte",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/programm/programmbereiche/innovationsprojekte",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4458,7 +4603,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L051",
@@ -4470,9 +4616,9 @@
       "title": "Demokratie leben Root: foerderung",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/foerderung",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4486,7 +4632,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L055",
@@ -4498,9 +4645,9 @@
       "title": "Demokratie leben Root: projektpraxis",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/projektpraxis",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4514,7 +4661,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L056",
@@ -4526,9 +4674,9 @@
       "title": "Demokratie leben Root: magazin",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.demokratie-leben.de/dl/projektpraxis/magazin",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
       "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4542,7 +4690,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L057",
@@ -4554,9 +4703,9 @@
       "title": "PfD Heidekreis: ausschreibungen 2",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.heidekreis.de/aktuelles/ausschreibungen-2.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4570,7 +4719,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L058",
@@ -4582,9 +4732,9 @@
       "title": "PfD Heidekreis: foerderung",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://www.heidekreis.de/gesundheit-soziales/demokratie-leben/foerderung.html",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4598,7 +4748,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L059",
@@ -4610,9 +4761,9 @@
       "title": "PfD Sankt Wendel: PfD Antragsformular2025",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://pfd.landkreis-st-wendel.de/fileadmin/user_upload/PDF-Dateien/2025/PfD_Antragsformular2025.pdf",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4626,7 +4777,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L060",
@@ -4638,9 +4790,9 @@
       "title": "PfD Sankt Wendel: foerderrichtlinie des bundesprogramms demokratie leben aende...",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://pfd.landkreis-st-wendel.de/fileadmin/user_upload/PDF-Dateien/2025/foerderrichtlinie-des-bundesprogramms-demokratie-leben-aenderung-2024-data.pdf",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4654,7 +4806,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L061",
@@ -4666,9 +4819,9 @@
       "title": "PfD Mansfeld-Suedharz: foerderfonds",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://partnerschaft-fuer-demokratie-msh.de/foerderfonds/",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
+      "publication_date": "Не указана",
+      "start_date": "Уточнить на сайте",
+      "deadline_date": "Уточнить на сайте",
       "rolling": false,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
@@ -4682,7 +4835,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     },
     {
       "id": "L062",
@@ -4694,13 +4848,13 @@
       "title": "PfD Mansfeld-Suedharz: foerdermoeglichkeiten",
       "description": "Локальные/федеральные страницы Demokratieförderung и заявки PfD.",
       "url": "https://partnerschaft-fuer-demokratie-msh.de/foerdermoeglichkeiten/",
-      "publication_date": "",
-      "start_date": "",
-      "deadline_date": "",
-      "rolling": false,
+      "publication_date": "Актуальный портал",
+      "start_date": "Открыто",
+      "deadline_date": "Без срока (rolling)",
+      "rolling": true,
       "lead_type": "source",
       "lead_reason": "Страница источника (мониторинг)",
-      "status": "unknown",
+      "status": "rolling",
       "note": "Старт/дедлайн показываются только при контекстном совпадении с ключевыми словами.",
       "fit_grade": "source",
       "fit_label": "source_page",
@@ -4710,7 +4864,8 @@
       ],
       "fit_flags": [],
       "fit_unknown": [],
-      "exclude_reason": ""
+      "exclude_reason": "",
+      "has_calendar_dates": false
     }
   ]
 }
