@@ -333,7 +333,6 @@ function renderList(items, { mode = "our" } = {}) {
   }
 
   const showGrade = mode !== "source";
-  const showLeadReason = mode === "application" || mode === "our";
   const showFitWhy = mode !== "source";
 
   const rows = items
@@ -351,7 +350,6 @@ function renderList(items, { mode = "our" } = {}) {
         </td>
         <td>${escapeHtml(i.source_label || i.source_name)}</td>
         ${showGrade ? `<td><span class="badge ${gClass}">${i.fit_grade || "?"}</span></td>` : ""}
-        ${showLeadReason ? `<td class="reason">${escapeHtml(i.lead_reason || "—")}</td>` : ""}
         ${showFitWhy ? `<td class="reason">${escapeHtml(formatFitWhy(i))}</td>` : ""}
         <td>${i.publication_date || "—"}</td>
         <td>${i.start_date || "—"}</td>
@@ -376,7 +374,6 @@ function renderList(items, { mode = "our" } = {}) {
               <th>Лид</th>
               <th>Источник</th>
               ${showGrade ? "<th>Оценка</th>" : ""}
-              ${showLeadReason ? "<th>Причина лида</th>" : ""}
               ${showFitWhy ? "<th>Обоснование оценки</th>" : ""}
               <th>Публикация</th>
               <th>Старт</th>
