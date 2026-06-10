@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BVUFSFJ Leads Dashboard</title>
+    <style>
+      :root {
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --accent: #2563eb;
+        --ok: #166534;
+        --warn: #9a3412;
+        --bad: #991b1b;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+      .wrap {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .top {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      h1 { margin: 0 0 8px; font-size: 22px; }
+      .subtitle { color: var(--muted); font-size: 14px; }
+      .meta {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .chip {
+        background: #f3f4f6;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 12px;
+        color: #374151;
+      }
+      .filters {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 0.8fr 1fr auto;
+        gap: 10px;
+        margin-top: 12px;
+      }
+      .tabs {
+        margin-top: 12px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .tab {
+        font-size: 13px;
+      }
+      .tab.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      input, select {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      button {
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: #fff;
+        cursor: pointer;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .tableWrap { overflow: auto; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+      table { width: 100%; border-collapse: collapse; min-width: 1200px; }
+      th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13px; }
+      th { text-align: left; background: #f9fafb; color: #374151; position: sticky; top: 0; }
+      td .t { font-weight: 600; margin-bottom: 4px; }
+      td .d { color: #6b7280; font-size: 12px; }
+      td.reason { color: #374151; font-size: 12px; max-width: 240px; line-height: 1.35; }
+      .status, .grade {
+        font-size: 12px;
+        border-radius: 999px;
+        padding: 4px 8px;
+        border: 1px solid;
+        white-space: nowrap;
+        display: inline-block;
+        font-weight: 600;
+      }
+      .st-active { color: var(--ok); border-color: #86efac; background: #f0fdf4; }
+      .st-unknown { color: #334155; border-color: #cbd5e1; background: #f8fafc; }
+      .st-expired { color: var(--bad); border-color: #fca5a5; background: #fef2f2; }
+      .st-watch { color: var(--warn); border-color: #fdba74; background: #fff7ed; }
+      .gr-a { color: #14532d; border-color: #86efac; background: #dcfce7; }
+      .gr-b { color: #92400e; border-color: #fcd34d; background: #fef9c3; }
+      .gr-c { color: var(--bad); border-color: #fca5a5; background: #fef2f2; }
+      .gr-source { color: #475569; border-color: #cbd5e1; background: #f1f5f9; }
+      .empty {
+        text-align: center;
+        color: var(--muted);
+        padding: 28px 12px;
+      }
+      @media (max-width: 900px) {
+        .filters { grid-template-columns: 1fr 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="top">
+        <h1>Leads Dashboard — фильтр BVUFSFJ</h1>
+        <div class="subtitle">
+          Наши лиды (A+B) по критериям организации. Отсеянные (C) сохранены с объяснением.
+        </div>
+        <div id="meta" class="meta"></div>
+        <div class="filters">
+          <input id="q" placeholder="Поиск по URL/источнику/описанию..." />
+          <select id="sourceFilter"><option value="">Все источники</option></select>
+          <select id="statusFilter">
+            <option value="">Все статусы</option>
+            <option value="active">active</option>
+            <option value="unknown">unknown</option>
+            <option value="expired">expired</option>
+            <option value="watch">watch</option>
+            <option value="rolling">rolling</option>
+          </select>
+          <div class="gradeFilterWrap">
+            <select id="gradeFilter">
+              <option value="">Все оценки</option>
+              <option value="A">A — strong</option>
+              <option value="B">B — review</option>
+              <option value="C">C — exclude</option>
+            </select>
+          </div>
+          <select id="dateFilter">
+            <option value="">Все даты</option>
+            <option value="with_dates">Только с датами</option>
+            <option value="no_dates">Только без дат</option>
+          </select>
+          <button id="resetBtn">Сбросить</button>
+        </div>
+        <div class="tabs">
+          <button id="tabOur" class="tab active">Наши лиды (A+B)</button>
+          <button id="tabStrong" class="tab">Сильные (A)</button>
+          <button id="tabReview" class="tab">На проверку (B)</button>
+          <button id="tabExcluded" class="tab">Отсеянные (C)</button>
+          <button id="tabApplication" class="tab">Все application</button>
+          <button id="tabSources" class="tab">Source pages</button>
+        </div>
+      </section>
+      <section id="list"></section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
