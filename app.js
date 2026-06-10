@@ -33,14 +33,35 @@ const gradeClass = {
 
 const gradeOrder = { A: 0, B: 1, C: 2, source: 3 };
 
-const tabTitles = {
-  our: "Наши лиды (A + B)",
-  strong: "Сильные лиды (A)",
+const sectionTitles = {
+  our: "Целевые лиды (A + B)",
+  strong: "Сильные (A)",
   review: "На проверку (B)",
   excluded: "Отсеянные (C)",
   application: "Все заявки",
   source: "Страницы источников",
 };
+
+const KPI_TABS = [
+  { key: "our", cls: "kpi-target", label: "Целевые", sub: "A + B" },
+  { key: "strong", cls: "kpi-a", label: "Сильные", sub: "оценка A" },
+  { key: "review", cls: "kpi-b", label: "На проверку", sub: "оценка B" },
+  { key: "excluded", cls: "kpi-c", label: "Отсеянные", sub: "оценка C" },
+  { key: "application", cls: "kpi-app", label: "Все заявки", sub: "до фильтра" },
+  { key: "source", cls: "kpi-src", label: "Источники", sub: "страницы" },
+];
+
+function countForTab(summary, key) {
+  const map = {
+    our: summary.our_leads_count,
+    strong: summary.strong_lead_count,
+    review: summary.review_needed_count,
+    excluded: summary.excluded_count,
+    application: summary.application_count,
+    source: summary.source_pages_count,
+  };
+  return map[key] ?? 0;
+}
 
 async function loadData() {
   const res = await fetch("./leads_ui_data.json", { cache: "no-store" });
@@ -52,157 +73,129 @@ function buildHeroMeta(summary) {
   const el = document.getElementById("heroMeta");
   const chips = [
     `Прогон: ${summary.run_id || "—"}`,
-    `Правила: v${summary.filter_rules_version || "—"}`,
-    `Обновлено: ${summary.updated_at || "—"}`,
+    `Правила v${summary.filter_rules_version || "—"}`,
+    summary.updated_at || "—",
   ];
-  el.innerHTML = chips.map((c) => `<span>${c}</span>`).join("");
+  el.innerHTML = chips.map((c) => `<span>${escapeHtml(c)}</span>`).join("");
 }
 
-function buildStats(summary) {
+function buildKpiTabs(summary, onSelect) {
   const el = document.getElementById("stats");
-  const cards = [
-    { cls: "stat-our", val: summary.our_leads_count ?? 0, lbl: "Наши (A+B)" },
-    { cls: "stat-a", val: summary.strong_lead_count ?? 0, lbl: "Сильные A" },
-    { cls: "stat-b", val: summary.review_needed_count ?? 0, lbl: "На проверку B" },
-    { cls: "stat-c", val: summary.excluded_count ?? 0, lbl: "Отсеянные C" },
-    { cls: "stat-src", val: summary.source_pages_count ?? 0, lbl: "Страницы источников" },
+  el.innerHTML = KPI_TABS.map(
+    (t) => `
+    <button type="button" class="kpi-card ${t.cls}" data-tab="${t.key}" role="tab" aria-selected="false">
+      <div class="val">${countForTab(summary, t.key)}</div>
+      <div class="lbl">${t.label}<br>${t.sub}</div>
+    </button>`,
+  ).join("");
+
+  el.querySelectorAll(".kpi-card").forEach((btn) => {
+    btn.addEventListener("click", () => onSelect(btn.dataset.tab));
+  });
+}
+
+function setActiveKpi(tabKey) {
+  document.querySelectorAll(".kpi-card").forEach((btn) => {
+    const active = btn.dataset.tab === tabKey;
+    btn.classList.toggle("active", active);
+    btn.setAttribute("aria-selected", active ? "true" : "false");
+  });
+}
+
+function svgFunnelChart(summary) {
+  const W = 920;
+  const H = 220;
+  const padL = 44;
+  const padR = 20;
+  const padB = 44;
+  const padT = 16;
+  const plotH = H - padB - padT;
+
+  const raw = summary.raw_count ?? 0;
+  const refined = summary.refined_count ?? 0;
+  const apps = summary.application_count ?? 0;
+  const target = summary.our_leads_count ?? 0;
+  const excluded = summary.excluded_count ?? 0;
+
+  const max = Math.max(raw, 1);
+  const cols = 4;
+  const gap = 18;
+  const barW = (W - padL - padR - gap * (cols - 1)) / cols;
+
+  function barHeight(v) {
+    return (plotH * v) / max;
+  }
+
+  const stages = [
+    { label: "Сырые", value: raw, color: COLORS.gray },
+    { label: "Очищённые", value: refined, color: COLORS.blue },
+    { label: "Заявки", value: apps, color: COLORS.schwarz },
   ];
-  el.innerHTML = cards
-    .map(
-      (c) => `
-    <div class="stat-card ${c.cls}">
-      <div class="val">${c.val}</div>
-      <div class="lbl">${c.lbl}</div>
-    </div>`,
-    )
-    .join("");
-}
 
-function svgBarChart(categories, values, colors) {
-  const W = 480;
-  const H = 200;
-  const padL = 36;
-  const padB = 36;
-  const padT = 12;
-  const max = Math.max(...values, 1);
-  const barW = (W - padL - 16) / values.length - 10;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="Воронка обработки лидов">`;
+  svg += `<line x1="${padL}" y1="${H - padB}" x2="${W - padR}" y2="${H - padB}" stroke="#d4d4d4"/>`;
 
-  const bars = values
-    .map((v, i) => {
-      const h = ((H - padB - padT) * v) / max;
-      const x = padL + i * (barW + 10);
-      const y = H - padB - h;
-      return `
-        <rect x="${x}" y="${y}" width="${barW}" height="${h}" rx="4" fill="${colors[i]}" opacity="0.92"/>
-        <text x="${x + barW / 2}" y="${H - 14}" text-anchor="middle" font-size="11" fill="#555">${categories[i]}</text>
-        <text x="${x + barW / 2}" y="${y - 6}" text-anchor="middle" font-size="12" font-weight="600" fill="#1c1c1c">${v}</text>`;
-    })
-    .join("");
+  stages.forEach((s, i) => {
+    const h = barHeight(s.value);
+    const x = padL + i * (barW + gap);
+    const y = H - padB - h;
+    svg += `<rect x="${x}" y="${y}" width="${barW}" height="${h}" rx="5" fill="${s.color}" opacity="0.9"/>`;
+    svg += `<text x="${x + barW / 2}" y="${y - 8}" text-anchor="middle" font-size="13" font-weight="600" fill="#1c1c1c">${s.value}</text>`;
+    svg += `<text x="${x + barW / 2}" y="${H - 16}" text-anchor="middle" font-size="11" fill="#555">${s.label}</text>`;
+  });
 
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="Воронка лидов">${bars}
-    <line x1="${padL}" y1="${H - padB}" x2="${W - 8}" y2="${H - padB}" stroke="#d4d4d4"/>
-  </svg>`;
-}
+  const stackX = padL + 3 * (barW + gap);
+  const totalH = barHeight(apps);
+  const targetH = apps > 0 ? (totalH * target) / apps : 0;
+  const excludedH = apps > 0 ? (totalH * excluded) / apps : 0;
+  const baseY = H - padB;
 
-function svgDonutChart(segments) {
-  const size = 180;
-  const cx = size / 2;
-  const cy = size / 2;
-  const r = 68;
-  const ir = 42;
-  const total = segments.reduce((s, x) => s + x.value, 0) || 1;
-  let angle = -Math.PI / 2;
+  if (apps > 0) {
+    svg += `<rect x="${stackX}" y="${baseY - targetH}" width="${barW}" height="${targetH}" rx="5" fill="${COLORS.gold}" opacity="0.95"/>`;
+    if (excludedH > 0) {
+      svg += `<rect x="${stackX}" y="${baseY - targetH - excludedH}" width="${barW}" height="${excludedH}" rx="5" fill="${COLORS.rot}" opacity="0.9"/>`;
+    }
+    svg += `<text x="${stackX + barW / 2}" y="${baseY - totalH - 10}" text-anchor="middle" font-size="13" font-weight="600" fill="#1c1c1c">${apps}</text>`;
+    if (targetH > 18) {
+      svg += `<text x="${stackX + barW / 2}" y="${baseY - targetH / 2}" text-anchor="middle" font-size="11" font-weight="600" fill="#5c4a00">${target}</text>`;
+    }
+    if (excludedH > 14) {
+      svg += `<text x="${stackX + barW / 2}" y="${baseY - targetH - excludedH / 2}" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">${excluded}</text>`;
+    }
+  }
 
-  const arcs = segments
-    .map((seg) => {
-      const slice = (seg.value / total) * Math.PI * 2;
-      const x1 = cx + r * Math.cos(angle);
-      const y1 = cy + r * Math.sin(angle);
-      angle += slice;
-      const x2 = cx + r * Math.cos(angle);
-      const y2 = cy + r * Math.sin(angle);
-      const xi1 = cx + ir * Math.cos(angle - slice);
-      const yi1 = cy + ir * Math.sin(angle - slice);
-      const xi2 = cx + ir * Math.cos(angle);
-      const yi2 = cy + ir * Math.sin(angle);
-      const large = slice > Math.PI ? 1 : 0;
-      const d = `M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2} L ${xi2} ${yi2} A ${ir} ${ir} 0 ${large} 0 ${xi1} ${yi1} Z`;
-      return `<path d="${d}" fill="${seg.color}"/>`;
-    })
-    .join("");
+  svg += `<text x="${stackX + barW / 2}" y="${H - 16}" text-anchor="middle" font-size="11" fill="#555">Разбор заявок</text>`;
+  svg += `<text x="${stackX + barW / 2}" y="${H - 4}" text-anchor="middle" font-size="9" fill="#888">целевые + отсеянные</text>`;
+  svg += `</svg>`;
 
-  const legend = segments
-    .map(
-      (s) => `
-    <div class="legend-item">
-      <span class="legend-dot" style="background:${s.color}"></span>
-      ${s.label}: ${s.value}
-    </div>`,
-    )
-    .join("");
-
-  return `
-    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
-      <svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" role="img" aria-label="Распределение A B C">
-        ${arcs}
-        <text x="${cx}" y="${cy - 4}" text-anchor="middle" font-size="22" font-weight="700" fill="#1c1c1c">${total}</text>
-        <text x="${cx}" y="${cy + 14}" text-anchor="middle" font-size="10" fill="#666">заявок</text>
-      </svg>
-      <div class="legend">${legend}</div>
-    </div>`;
+  return svg;
 }
 
 function buildCharts(summary) {
   const el = document.getElementById("charts");
-  const funnel = svgBarChart(
-    ["Сырые", "Очищ.", "Заявки", "Наши"],
-    [
-      summary.raw_count ?? 0,
-      summary.refined_count ?? 0,
-      summary.application_count ?? 0,
-      summary.our_leads_count ?? 0,
-    ],
-    [COLORS.gray, COLORS.blue, COLORS.schwarz, COLORS.gold],
-  );
-
-  const donut = svgDonutChart([
-    { label: "A сильные", value: summary.strong_lead_count ?? 0, color: COLORS.green },
-    { label: "B проверка", value: summary.review_needed_count ?? 0, color: COLORS.amber },
-    { label: "C отсеять", value: summary.excluded_count ?? 0, color: COLORS.rot },
-  ]);
-
   el.innerHTML = `
     <div class="panel">
-      <div class="panel-head">Воронка лидов (количество, шт.)</div>
-      <div class="panel-body">${funnel}
-        <div class="chart-caption">Источник: leads_ui_data.json · этапы пайплайна мониторинга</div>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-head">Заявки по оценке A / B / C</div>
-      <div class="panel-body">${donut}
-        <div class="chart-caption">Только application leads · страницы источников не включены</div>
+      <div class="panel-head">Воронка обработки лидов</div>
+      <div class="panel-body">
+        ${svgFunnelChart(summary)}
+        <div class="chart-legend">
+          <span><i style="background:${COLORS.gray}"></i> Сырые записи</span>
+          <span><i style="background:${COLORS.blue}"></i> После очистки</span>
+          <span><i style="background:${COLORS.schwarz}"></i> Заявки (application)</span>
+          <span><i style="background:${COLORS.gold}"></i> Целевые (${summary.our_leads_count ?? 0})</span>
+          <span><i style="background:${COLORS.rot}"></i> Отсеянные (${summary.excluded_count ?? 0})</span>
+        </div>
+        <div class="chart-caption">
+          Последний столбец — состав из ${summary.application_count ?? 0} заявок:
+          ${summary.our_leads_count ?? 0} целевых + ${summary.excluded_count ?? 0} отсеянных = ${(summary.our_leads_count ?? 0) + (summary.excluded_count ?? 0)}
+        </div>
       </div>
     </div>`;
 }
 
-function setTabCounts(summary) {
-  const map = {
-    cntOur: summary.our_leads_count,
-    cntStrong: summary.strong_lead_count,
-    cntReview: summary.review_needed_count,
-    cntExcluded: summary.excluded_count,
-    cntApp: summary.application_count,
-    cntSrc: summary.source_pages_count,
-  };
-  Object.entries(map).forEach(([id, n]) => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = n != null ? `(${n})` : "";
-  });
-}
-
 function renderSourcesFilter(items) {
   const sourceSel = document.getElementById("sourceFilter");
+  const current = sourceSel.value;
   sourceSel.innerHTML = `<option value="">Все</option>`;
   const sources = [...new Set(items.map((x) => x.source_name))].sort();
   for (const s of sources) {
@@ -210,6 +203,9 @@ function renderSourcesFilter(items) {
     opt.value = s;
     opt.textContent = s;
     sourceSel.appendChild(opt);
+  }
+  if ([...sourceSel.options].some((o) => o.value === current)) {
+    sourceSel.value = current;
   }
 }
 
@@ -235,7 +231,7 @@ function sortItems(items) {
 
 function renderList(items, { mode = "our" } = {}) {
   const list = document.getElementById("list");
-  const title = tabTitles[mode] || "Лиды";
+  const title = sectionTitles[mode] || "Лиды";
 
   if (!items.length) {
     list.innerHTML = `<div class="empty">Ничего не найдено по текущим фильтрам.</div>`;
@@ -251,9 +247,6 @@ function renderList(items, { mode = "our" } = {}) {
       const stClass = stateClass[i.status] || stateClass.unknown;
       const gClass = gradeClass[i.fit_grade] || "gr-b";
       const stLabel = statusRu[i.status] || i.status;
-      const deadline = i.deadline_date || "—";
-      const start = i.start_date || "—";
-      const pub = i.publication_date || "—";
 
       return `
       <tr>
@@ -266,9 +259,9 @@ function renderList(items, { mode = "our" } = {}) {
         ${showGrade ? `<td><span class="badge ${gClass}">${i.fit_grade || "?"}</span></td>` : ""}
         ${showLeadReason ? `<td class="reason">${escapeHtml(i.lead_reason || "—")}</td>` : ""}
         ${showFitWhy ? `<td class="reason">${escapeHtml(formatFitWhy(i))}</td>` : ""}
-        <td>${pub}</td>
-        <td>${start}</td>
-        <td>${deadline}</td>
+        <td>${i.publication_date || "—"}</td>
+        <td>${i.start_date || "—"}</td>
+        <td>${i.deadline_date || "—"}</td>
         <td><span class="badge ${stClass}">${stLabel}</span></td>
         <td><a class="link-btn" href="${escapeAttr(i.url)}" target="_blank" rel="noreferrer">Открыть</a></td>
       </tr>`;
@@ -289,8 +282,8 @@ function renderList(items, { mode = "our" } = {}) {
               <th>Лид</th>
               <th>Источник</th>
               ${showGrade ? "<th>Оценка</th>" : ""}
-              ${showLeadReason ? "<th>Почему lead</th>" : ""}
-              ${showFitWhy ? "<th>Почему A/B/C</th>" : ""}
+              ${showLeadReason ? "<th>Причина лида</th>" : ""}
+              ${showFitWhy ? "<th>Обоснование оценки</th>" : ""}
               <th>Публикация</th>
               <th>Старт</th>
               <th>Дедлайн</th>
@@ -335,22 +328,11 @@ function wireFilters(payload) {
   const dateFilter = document.getElementById("dateFilter");
   const resetBtn = document.getElementById("resetBtn");
 
-  const tabs = {
-    our: document.getElementById("tabOur"),
-    strong: document.getElementById("tabStrong"),
-    review: document.getElementById("tabReview"),
-    excluded: document.getElementById("tabExcluded"),
-    application: document.getElementById("tabApplication"),
-    source: document.getElementById("tabSources"),
-  };
-
   const getItems = () => tabItems[activeTab] || [];
 
   const setActiveTab = (name) => {
     activeTab = name;
-    Object.entries(tabs).forEach(([key, el]) => {
-      if (el) el.classList.toggle("active", key === name);
-    });
+    setActiveKpi(name);
     const showGradeFilter = activeTab !== "source";
     gradeFilter.closest(".gradeFilterWrap").style.display = showGradeFilter ? "" : "none";
     renderSourcesFilter(getItems());
@@ -388,10 +370,6 @@ function wireFilters(payload) {
     el.addEventListener("input", apply),
   );
 
-  Object.entries(tabs).forEach(([name, el]) => {
-    if (el) el.addEventListener("click", () => setActiveTab(name));
-  });
-
   resetBtn.addEventListener("click", () => {
     q.value = "";
     sourceFilter.value = "";
@@ -401,6 +379,7 @@ function wireFilters(payload) {
     apply();
   });
 
+  buildKpiTabs(payload.summary || {}, setActiveTab);
   setActiveTab("our");
 }
 
@@ -409,9 +388,7 @@ async function main() {
     const payload = await loadData();
     const summary = payload.summary || {};
     buildHeroMeta(summary);
-    buildStats(summary);
     buildCharts(summary);
-    setTabCounts(summary);
     wireFilters(payload);
   } catch (e) {
     const list = document.getElementById("list");
