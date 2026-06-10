@@ -12,12 +12,12 @@
         --de-schwarz: #1c1c1c;
         --de-rot: #c8102e;
         --de-gold: #ffce00;
-        --de-gold-soft: #fff4c2;
-        --bg: #ececec;
+        --de-gold-soft: #fff8d6;
+        --bg: #f0eeea;
         --card: #ffffff;
         --text: #1c1c1c;
-        --muted: #5c5c5c;
-        --line: #d4d4d4;
+        --muted: #4a4a4a;
+        --line: #ddd8d0;
         --ok: #1b6b3a;
         --ok-bg: #e8f5ec;
         --warn: #9a5b00;
@@ -26,8 +26,9 @@
         --bad-bg: #fdeaea;
         --info: #2a4a7a;
         --info-bg: #eaf0fa;
-        --radius: 10px;
-        --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        --radius: 16px;
+        --shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        --font-base: 16px;
       }
 
       * { box-sizing: border-box; }
@@ -35,117 +36,239 @@
       body {
         margin: 0;
         font-family: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+        font-size: var(--font-base);
         background: var(--bg);
         color: var(--text);
-        line-height: 1.45;
+        line-height: 1.5;
       }
 
       .flag-bar {
-        height: 4px;
+        height: 5px;
         background: linear-gradient(90deg, var(--de-schwarz) 33.33%, var(--de-rot) 33.33% 66.66%, var(--de-gold) 66.66%);
       }
 
       .wrap {
         max-width: 1320px;
         margin: 0 auto;
-        padding: 16px 20px 40px;
+        padding: 24px 24px 48px;
       }
 
-      .topbar {
+      /* ── Hero ── */
+      .hero {
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        align-items: flex-start;
-        gap: 16px;
-        margin-bottom: 14px;
-        flex-wrap: wrap;
-      }
-
-      .topbar h1 {
-        margin: 0;
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-      }
-
-      .topbar .tagline {
-        margin: 4px 0 0;
-        font-size: 13px;
-        color: var(--muted);
-      }
-
-      .topbar-meta {
-        display: flex;
-        gap: 6px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        font-size: 11px;
-        color: var(--muted);
-      }
-
-      .topbar-meta span {
+        gap: 32px;
         background: var(--card);
+        border-radius: 20px;
+        padding: 28px 36px;
+        margin-bottom: 24px;
+        box-shadow: var(--shadow);
         border: 1px solid var(--line);
-        border-radius: 6px;
-        padding: 4px 8px;
-        white-space: nowrap;
       }
 
+      .hero-text h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+      }
+
+      .hero-text p {
+        margin: 0;
+        font-size: 17px;
+        color: var(--muted);
+      }
+
+      .search-orb {
+        flex-shrink: 0;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid var(--de-schwarz);
+        background: radial-gradient(circle at 35% 30%, #ffe566 0%, var(--de-gold) 55%, #d4a800 100%);
+        box-shadow:
+          0 6px 0 var(--de-schwarz),
+          0 12px 32px rgba(0, 0, 0, 0.18);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-family: inherit;
+        color: var(--de-schwarz);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .search-orb:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow:
+          0 8px 0 var(--de-schwarz),
+          0 18px 40px rgba(0, 0, 0, 0.22);
+      }
+
+      .search-orb:active {
+        transform: translateY(2px);
+        box-shadow:
+          0 2px 0 var(--de-schwarz),
+          0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .search-orb svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .search-orb span {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      /* ── Search drawer ── */
+      .search-drawer {
+        display: none;
+        margin-bottom: 24px;
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 20px 24px;
+        box-shadow: var(--shadow);
+        border: 2px solid var(--de-gold);
+        animation: slideDown 0.25s ease;
+      }
+
+      .search-drawer.open {
+        display: block;
+      }
+
+      @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .search-drawer-inner {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .search-drawer-icon {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--de-gold-soft);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .search-drawer-icon svg {
+        width: 22px;
+        height: 22px;
+        color: var(--de-schwarz);
+      }
+
+      #q {
+        flex: 1;
+        font-size: 18px;
+        padding: 14px 18px;
+        border-radius: 12px;
+        border: 2px solid var(--line);
+        background: #fafaf8;
+        font-family: inherit;
+        transition: border-color 0.15s, box-shadow 0.15s;
+      }
+
+      #q:focus {
+        outline: none;
+        border-color: var(--de-schwarz);
+        box-shadow: 0 0 0 4px rgba(255, 206, 0, 0.35);
+        background: #fff;
+      }
+
+      .search-close {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 2px solid var(--line);
+        background: #fff;
+        cursor: pointer;
+        font-size: 18px;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.15s, border-color 0.15s;
+      }
+
+      .search-close:hover {
+        background: #fff0f2;
+        border-color: var(--de-rot);
+        color: var(--de-rot);
+      }
+
+      /* ── KPI tabs ── */
       .kpi-grid {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        gap: 10px;
-        margin-bottom: 14px;
+        gap: 14px;
+        margin-bottom: 24px;
       }
 
       .kpi-card {
         background: var(--card);
         border: 2px solid var(--line);
         border-radius: var(--radius);
-        padding: 12px 14px;
-        border-left: 4px solid var(--accent, var(--de-schwarz));
+        padding: 18px 20px;
+        border-bottom: 4px solid var(--accent, var(--de-schwarz));
         box-shadow: var(--shadow);
         cursor: pointer;
         text-align: left;
         font-family: inherit;
         color: inherit;
-        transition: border-color 0.15s, box-shadow 0.15s, transform 0.12s;
+        transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
       }
 
       .kpi-card:hover {
-        border-color: #aaa;
-        transform: translateY(-1px);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
       }
 
       .kpi-card.active {
         border-color: var(--de-schwarz);
-        box-shadow: 0 0 0 1px var(--de-schwarz), inset 0 -3px 0 var(--accent, var(--de-gold));
+        background: #fffdf5;
+        box-shadow: 0 0 0 2px var(--de-schwarz), 0 8px 28px rgba(0, 0, 0, 0.1);
       }
 
       .kpi-card .val {
-        font-size: 26px;
+        font-size: 38px;
         font-weight: 700;
-        line-height: 1.1;
+        line-height: 1;
         color: var(--val-color, var(--text));
       }
 
       .kpi-card .lbl {
-        margin-top: 3px;
-        font-size: 11px;
+        margin-top: 8px;
+        font-size: 15px;
         color: var(--muted);
-        font-weight: 500;
+        font-weight: 600;
         line-height: 1.3;
       }
 
-      .kpi-target { --accent: var(--de-gold); --val-color: #8a6d00; }
+      .kpi-target { --accent: var(--de-gold); --val-color: #7a6200; }
       .kpi-a { --accent: #2d8a4e; --val-color: var(--ok); }
       .kpi-b { --accent: #d48806; --val-color: var(--warn); }
       .kpi-c { --accent: var(--de-rot); --val-color: var(--bad); }
       .kpi-app { --accent: var(--de-schwarz); }
       .kpi-src { --accent: var(--info); --val-color: var(--info); }
 
-      .chart-section {
-        margin-bottom: 14px;
-      }
+      /* ── Chart ── */
+      .chart-section { margin-bottom: 24px; }
 
       .panel {
         background: var(--card);
@@ -156,112 +279,110 @@
       }
 
       .panel-head {
-        padding: 10px 16px;
+        padding: 16px 24px;
         border-bottom: 1px solid var(--line);
-        font-size: 13px;
+        font-size: 17px;
         font-weight: 600;
-        background: #fafafa;
+        background: #fafaf8;
       }
 
-      .panel-body {
-        padding: 16px 16px 12px;
-      }
+      .panel-body { padding: 24px; }
 
       .chart-caption {
-        margin-top: 8px;
-        font-size: 11px;
+        margin-top: 12px;
+        font-size: 14px;
         color: var(--muted);
       }
 
       .chart-legend {
         display: flex;
-        gap: 16px;
+        gap: 20px;
         flex-wrap: wrap;
-        margin-top: 10px;
-        font-size: 12px;
+        margin-top: 14px;
+        font-size: 15px;
         color: var(--muted);
       }
 
       .chart-legend span {
         display: inline-flex;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
       }
 
       .chart-legend i {
         display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-radius: 2px;
+        width: 14px;
+        height: 14px;
+        border-radius: 3px;
       }
 
+      /* ── Filters ── */
       .controls {
         background: var(--card);
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        padding: 14px 16px;
-        margin-bottom: 14px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
         box-shadow: var(--shadow);
       }
 
       .controls-title {
-        font-size: 12px;
+        font-size: 17px;
         font-weight: 600;
-        margin-bottom: 10px;
-        color: var(--muted);
+        margin-bottom: 16px;
+        color: var(--text);
       }
 
       .filters {
         display: grid;
-        grid-template-columns: minmax(200px, 2.2fr) minmax(120px, 1.1fr) minmax(100px, 0.9fr) minmax(100px, 0.9fr) minmax(90px, 0.8fr) auto;
-        gap: 10px;
+        grid-template-columns: repeat(4, 1fr) auto;
+        gap: 14px;
         align-items: end;
       }
 
       .field label {
         display: block;
-        font-size: 11px;
+        font-size: 14px;
         font-weight: 600;
         color: var(--muted);
-        margin-bottom: 4px;
+        margin-bottom: 6px;
       }
 
-      input, select {
+      select {
         width: 100%;
-        padding: 9px 11px;
-        border-radius: 8px;
-        border: 1px solid var(--line);
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 2px solid var(--line);
         background: #fff;
         font-family: inherit;
-        font-size: 13px;
+        font-size: 15px;
         transition: border-color 0.15s, box-shadow 0.15s;
       }
 
-      input:focus, select:focus {
+      select:focus {
         outline: none;
         border-color: var(--de-schwarz);
-        box-shadow: 0 0 0 3px rgba(28, 28, 28, 0.08);
+        box-shadow: 0 0 0 3px rgba(255, 206, 0, 0.3);
       }
 
       .btn-reset {
-        padding: 9px 14px;
-        border-radius: 8px;
-        border: 1px solid var(--de-rot);
+        padding: 12px 22px;
+        border-radius: 10px;
+        border: 2px solid var(--de-rot);
         background: #fff;
         color: var(--de-rot);
         cursor: pointer;
         font-family: inherit;
-        font-size: 13px;
-        font-weight: 500;
+        font-size: 15px;
+        font-weight: 600;
         white-space: nowrap;
-        height: 38px;
+        height: 46px;
         transition: background 0.15s;
       }
 
-      .btn-reset:hover {
-        background: #fff0f2;
-      }
+      .btn-reset:hover { background: #fff0f2; }
 
+      /* ── Table ── */
       .table-panel {
         background: var(--card);
         border: 1px solid var(--line);
@@ -271,55 +392,56 @@
       }
 
       .table-head-bar {
-        padding: 11px 16px;
+        padding: 16px 24px;
         border-bottom: 1px solid var(--line);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: #fafafa;
+        background: #fafaf8;
       }
 
       .table-head-bar h2 {
         margin: 0;
-        font-size: 15px;
-        font-weight: 600;
+        font-size: 20px;
+        font-weight: 700;
       }
 
       .result-count {
-        font-size: 12px;
+        font-size: 15px;
         color: var(--muted);
+        font-weight: 500;
       }
 
       .tableWrap { overflow: auto; }
       table { width: 100%; border-collapse: collapse; min-width: 1100px; }
       th, td {
-        padding: 10px 14px;
+        padding: 14px 18px;
         border-bottom: 1px solid var(--line);
         vertical-align: top;
-        font-size: 13px;
+        font-size: 15px;
       }
       th {
         text-align: left;
-        background: #f3f3f3;
-        color: #444;
-        font-size: 12px;
+        background: #f5f3ef;
+        color: #333;
+        font-size: 14px;
         font-weight: 600;
         position: sticky;
         top: 0;
         z-index: 1;
       }
       tbody tr:hover { background: var(--de-gold-soft); }
-      tbody tr:nth-child(even) { background: #fafafa; }
+      tbody tr:nth-child(even) { background: #fafaf8; }
       tbody tr:nth-child(even):hover { background: var(--de-gold-soft); }
 
-      td .t { font-weight: 600; margin-bottom: 3px; color: var(--text); }
-      td .d { color: var(--muted); font-size: 12px; }
-      td.reason { color: #444; font-size: 12px; max-width: 220px; line-height: 1.4; }
+      td .t { font-weight: 600; font-size: 15px; margin-bottom: 4px; color: var(--text); }
+      td .d { color: var(--muted); font-size: 14px; }
+      td.reason { color: #444; font-size: 14px; max-width: 260px; line-height: 1.45; }
 
       .badge {
-        font-size: 11px;
-        border-radius: 6px;
-        padding: 4px 8px;
+        font-size: 13px;
+        border-radius: 8px;
+        padding: 5px 10px;
         border: 1px solid;
         white-space: nowrap;
         display: inline-block;
@@ -338,13 +460,13 @@
 
       .link-btn {
         display: inline-block;
-        padding: 5px 10px;
-        border-radius: 6px;
+        padding: 8px 16px;
+        border-radius: 8px;
         background: var(--de-schwarz);
         color: #fff;
         text-decoration: none;
-        font-size: 12px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 600;
         transition: background 0.15s;
       }
 
@@ -353,51 +475,71 @@
       .empty, .error-box {
         text-align: center;
         color: var(--muted);
-        padding: 40px 20px;
+        font-size: 17px;
+        padding: 48px 24px;
         background: var(--card);
         border: 1px solid var(--line);
         border-radius: var(--radius);
       }
 
       @media (max-width: 1100px) {
+        .hero { flex-direction: column; text-align: center; }
         .kpi-grid { grid-template-columns: repeat(3, 1fr); }
         .filters { grid-template-columns: 1fr 1fr; }
       }
 
       @media (max-width: 640px) {
+        .hero-text h1 { font-size: 26px; }
+        .search-orb { width: 110px; height: 110px; }
         .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+        .kpi-card .val { font-size: 30px; }
       }
     </style>
   </head>
   <body>
     <div class="flag-bar"></div>
     <div class="wrap">
-      <header class="topbar">
-        <div>
+      <header class="hero">
+        <div class="hero-text">
           <h1>Дашборд лидов BVUFSFJ</h1>
-          <p class="tagline">Мониторинг грантов · оценка A/B/C · целевые и отсеянные лиды</p>
+          <p>Мониторинг грантов · оценка A/B/C</p>
         </div>
-        <div id="heroMeta" class="topbar-meta"></div>
+        <button type="button" id="searchOrb" class="search-orb" aria-label="Открыть поиск лидов">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7"/>
+            <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+          </svg>
+          <span>Поиск<br>лидов</span>
+        </button>
       </header>
+
+      <div id="searchDrawer" class="search-drawer">
+        <div class="search-drawer-inner">
+          <div class="search-drawer-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="7"/>
+              <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+            </svg>
+          </div>
+          <input id="q" type="search" placeholder="Введите URL, источник или описание лида..." autocomplete="off" />
+          <button type="button" id="searchClose" class="search-close" aria-label="Закрыть поиск">✕</button>
+        </div>
+      </div>
 
       <section id="stats" class="kpi-grid" role="tablist" aria-label="Разделы лидов"></section>
       <section id="charts" class="chart-section"></section>
 
       <section class="controls">
-        <div class="controls-title">Фильтры таблицы</div>
+        <div class="controls-title">Уточнить выборку</div>
         <div class="filters">
           <div class="field">
-            <label for="q">Поиск</label>
-            <input id="q" placeholder="URL, источник, описание..." />
-          </div>
-          <div class="field">
             <label for="sourceFilter">Источник</label>
-            <select id="sourceFilter"><option value="">Все</option></select>
+            <select id="sourceFilter"><option value="">Все источники</option></select>
           </div>
           <div class="field">
             <label for="statusFilter">Статус</label>
             <select id="statusFilter">
-              <option value="">Все</option>
+              <option value="">Все статусы</option>
               <option value="active">Активный</option>
               <option value="rolling">Постоянный</option>
               <option value="watch">Скоро дедлайн</option>
@@ -408,7 +550,7 @@
           <div class="field gradeFilterWrap">
             <label for="gradeFilter">Оценка</label>
             <select id="gradeFilter">
-              <option value="">Все</option>
+              <option value="">Все оценки</option>
               <option value="A">A — сильный</option>
               <option value="B">B — проверить</option>
               <option value="C">C — отсеять</option>
@@ -417,7 +559,7 @@
           <div class="field">
             <label for="dateFilter">Даты</label>
             <select id="dateFilter">
-              <option value="">Все</option>
+              <option value="">Все даты</option>
               <option value="with_dates">С датами</option>
               <option value="no_dates">Без дат</option>
             </select>

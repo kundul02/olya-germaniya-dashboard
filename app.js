@@ -69,14 +69,26 @@ async function loadData() {
   return res.json();
 }
 
-function buildHeroMeta(summary) {
-  const el = document.getElementById("heroMeta");
-  const chips = [
-    `Прогон: ${summary.run_id || "—"}`,
-    `Правила v${summary.filter_rules_version || "—"}`,
-    summary.updated_at || "—",
-  ];
-  el.innerHTML = chips.map((c) => `<span>${escapeHtml(c)}</span>`).join("");
+function wireSearchOrb() {
+  const orb = document.getElementById("searchOrb");
+  const drawer = document.getElementById("searchDrawer");
+  const closeBtn = document.getElementById("searchClose");
+  const q = document.getElementById("q");
+
+  const open = () => {
+    drawer.classList.add("open");
+    setTimeout(() => q.focus(), 80);
+  };
+
+  const close = () => {
+    drawer.classList.remove("open");
+  };
+
+  orb.addEventListener("click", open);
+  closeBtn.addEventListener("click", close);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && drawer.classList.contains("open")) close();
+  });
 }
 
 function buildKpiTabs(summary, onSelect) {
@@ -85,7 +97,7 @@ function buildKpiTabs(summary, onSelect) {
     (t) => `
     <button type="button" class="kpi-card ${t.cls}" data-tab="${t.key}" role="tab" aria-selected="false">
       <div class="val">${countForTab(summary, t.key)}</div>
-      <div class="lbl">${t.label}<br>${t.sub}</div>
+      <div class="lbl">${t.label} · ${t.sub}</div>
     </button>`,
   ).join("");
 
@@ -104,7 +116,7 @@ function setActiveKpi(tabKey) {
 
 function svgFunnelChart(summary) {
   const W = 920;
-  const H = 220;
+  const H = 240;
   const padL = 44;
   const padR = 20;
   const padB = 44;
@@ -140,8 +152,8 @@ function svgFunnelChart(summary) {
     const x = padL + i * (barW + gap);
     const y = H - padB - h;
     svg += `<rect x="${x}" y="${y}" width="${barW}" height="${h}" rx="5" fill="${s.color}" opacity="0.9"/>`;
-    svg += `<text x="${x + barW / 2}" y="${y - 8}" text-anchor="middle" font-size="13" font-weight="600" fill="#1c1c1c">${s.value}</text>`;
-    svg += `<text x="${x + barW / 2}" y="${H - 16}" text-anchor="middle" font-size="11" fill="#555">${s.label}</text>`;
+    svg += `<text x="${x + barW / 2}" y="${y - 10}" text-anchor="middle" font-size="16" font-weight="700" fill="#1c1c1c">${s.value}</text>`;
+    svg += `<text x="${x + barW / 2}" y="${H - 18}" text-anchor="middle" font-size="14" fill="#444">${s.label}</text>`;
   });
 
   const stackX = padL + 3 * (barW + gap);
@@ -155,17 +167,16 @@ function svgFunnelChart(summary) {
     if (excludedH > 0) {
       svg += `<rect x="${stackX}" y="${baseY - targetH - excludedH}" width="${barW}" height="${excludedH}" rx="5" fill="${COLORS.rot}" opacity="0.9"/>`;
     }
-    svg += `<text x="${stackX + barW / 2}" y="${baseY - totalH - 10}" text-anchor="middle" font-size="13" font-weight="600" fill="#1c1c1c">${apps}</text>`;
-    if (targetH > 18) {
-      svg += `<text x="${stackX + barW / 2}" y="${baseY - targetH / 2}" text-anchor="middle" font-size="11" font-weight="600" fill="#5c4a00">${target}</text>`;
+    svg += `<text x="${stackX + barW / 2}" y="${baseY - totalH - 12}" text-anchor="middle" font-size="16" font-weight="700" fill="#1c1c1c">${apps}</text>`;
+    if (targetH > 20) {
+      svg += `<text x="${stackX + barW / 2}" y="${baseY - targetH / 2}" text-anchor="middle" font-size="14" font-weight="700" fill="#5c4a00">${target}</text>`;
     }
-    if (excludedH > 14) {
-      svg += `<text x="${stackX + barW / 2}" y="${baseY - targetH - excludedH / 2}" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">${excluded}</text>`;
+    if (excludedH > 16) {
+      svg += `<text x="${stackX + barW / 2}" y="${baseY - targetH - excludedH / 2}" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">${excluded}</text>`;
     }
   }
 
-  svg += `<text x="${stackX + barW / 2}" y="${H - 16}" text-anchor="middle" font-size="11" fill="#555">Разбор заявок</text>`;
-  svg += `<text x="${stackX + barW / 2}" y="${H - 4}" text-anchor="middle" font-size="9" fill="#888">целевые + отсеянные</text>`;
+  svg += `<text x="${stackX + barW / 2}" y="${H - 18}" text-anchor="middle" font-size="14" fill="#444">Разбор заявок</text>`;
   svg += `</svg>`;
 
   return svg;
@@ -196,7 +207,7 @@ function buildCharts(summary) {
 function renderSourcesFilter(items) {
   const sourceSel = document.getElementById("sourceFilter");
   const current = sourceSel.value;
-  sourceSel.innerHTML = `<option value="">Все</option>`;
+  sourceSel.innerHTML = `<option value="">Все источники</option>`;
   const sources = [...new Set(items.map((x) => x.source_name))].sort();
   for (const s of sources) {
     const opt = document.createElement("option");
@@ -385,9 +396,9 @@ function wireFilters(payload) {
 
 async function main() {
   try {
+    wireSearchOrb();
     const payload = await loadData();
     const summary = payload.summary || {};
-    buildHeroMeta(summary);
     buildCharts(summary);
     wireFilters(payload);
   } catch (e) {
